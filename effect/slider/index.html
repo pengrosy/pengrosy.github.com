@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>幻灯片左右滑动效果 - 智能社 - www.zhinengshe.com</title>
+<link href="css.css" rel="stylesheet" type="text/css" />
+<script src="../js/move.js"></script>
+<script>
+window.onload=function(){
+	gundong();
+	function gundong(){	
+		var oPlay=document.getElementById("play");
+		var oOl=oPlay.children[2];
+		var aCardHead=oOl.children;
+		var oCardBody=oPlay.children[3];
+		var oCardBodyLi=oCardBody.children;
+		var oPrev=document.getElementsByClassName('prev')[0];
+		var oNext=document.getElementsByClassName('next')[0];
+		var now=0;
+		var ready=true;
+		//0.布局定位
+		oCardBody.innerHTML+=oCardBody.innerHTML;
+		oCardBody.style.width=oCardBodyLi[0].offsetWidth*oCardBodyLi.length+'px';
+		//1.选项卡	oCardBody.left=-li.w*index
+		for(var i=0;i<aCardHead.length;i++){
+			(function(index){
+				aCardHead[i].onclick=function(){
+					if(!ready) return;
+					now=index;//更新now
+					tab();
+				};
+			})(i);	
+		}
+		function tab(){
+			for(var i=0;i<aCardHead.length;i++){
+				aCardHead[i].className='';	
+			}
+			if(now==5){
+				aCardHead[0].className='active';	
+			}else{
+				aCardHead[now].className='active';	
+			}
+			ready=false;
+			move(oCardBody,{left:-oCardBodyLi[0].offsetWidth*now},{duration:1000,complete:function(){
+				ready=true;
+				if(now==5){
+					//归位
+					oCardBody.style.left=0;
+					now=0;	
+				}
+			}});
+		}
+		function next(){
+			now++;
+			//if(now==5) now=0;		//5==aCardHead.length
+			tab();	
+		}
+		
+		var timer=setInterval(function(){
+			oNext.onclick();	
+		},2000);
+		oPlay.onmouseover=function(){
+			clearInterval(timer);	
+		};
+		oPlay.onmouseout=function(){
+			timer=setInterval(function(){
+				oNext.onclick();	
+			},2000);	
+		};
+		
+		oNext.onclick=function(){
+			if(!ready) return;
+			next();	
+		};
+		oPrev.onclick=function(){
+			if(!ready) return;
+			if(now==0){
+				//归位
+				now=4	//length-1
+				oCardBody.style.left=-oCardBody.offsetWidth/2+'px';	
+			}else{
+				now--;	
+			}
+			tab();	//动
+		};			
+		//2.加运动
+		//3.无缝
+	}
+	
+	gundong2();
+	function gundong2(){
+		var oPlay2=document.getElementById('play2');
+		var aHead=oPlay2.children[0].children;
+		var oUl=oPlay2.children[1];
+		var now=0;
+		for(var i=0;i<aHead.length;i++){
+			(function(index){
+				aHead[i].onmouseover=function(){
+					now=index;
+					tab();
+				};	
+			})(i);
+		}
+		function next(){
+			now++;
+			if(now==aHead.length) now=0;
+			tab();	
+		}
+		
+		function tab(){
+			for(var i=0;i<aHead.length;i++){
+				aHead[i].className='';	
+			}
+			aHead[now].className='active';
+			//oUl.style.top=-now*oUl.children[0].offsetHeight+'px';	
+			move(oUl,{top:-now*oUl.children[0].offsetHeight},{duration:300});
+		}
+		
+		var timerAuto=setInterval(next,2000);
+		oPlay2.onmouseover=function(){
+			clearInterval(timerAuto);	
+		};
+		oPlay2.onmouseout=function(){
+			timerAuto=setInterval(next,2000);	
+		};
+	}
+};
+</script>
+</head>
+
+<body>
+<h2 class="lr">左右无缝滚动</h2>
+<div class="box" id="play">
+    <p class="prev">&laquo;</p>
+    <p class="next">&raquo;</p>
+    <ol>
+        <li class="active">0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    <ul>
+        <li><a href="javascript:;"><img src="images/1.jpg" alt="广告一" /></a></li>
+        <li><a href="javascript:;"><img src="images/2.jpg" alt="广告二" /></a></li>
+        <li><a href="javascript:;"><img src="images/3.jpg" alt="广告三" /></a></li>
+        <li><a href="javascript:;"><img src="images/4.jpg" alt="广告四" /></a></li>
+        <li><a href="javascript:;"><img src="images/5.jpg" alt="广告五" /></a></li>
+    </ul>
+</div>
+
+<h2 class="ud">上下滚动</h2>
+<div class="play2" id="play2">
+    <ol>
+    	<li class="active">0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+	<ul>
+		<li><a href="javascript:;"><img src="images/1.jpg" alt="广告一" /></a></li>
+		<li><a href="javascript:;"><img src="images/2.jpg" alt="广告二" /></a></li>
+		<li><a href="javascript:;"><img src="images/3.jpg" alt="广告三" /></a></li>
+		<li><a href="javascript:;"><img src="images/4.jpg" alt="广告四" /></a></li>
+		<li><a href="javascript:;"><img src="images/5.jpg" alt="广告五" /></a></li>
+	</ul>
+</div>
+
+</body>
+</html>
