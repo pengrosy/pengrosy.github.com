@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-family:"Microsoft Yahei"; margin:0; background:#FFF;}
+h1,h2,h3,h4,h5,h6,ul,ol,dl,p{ margin:0; padding:0;}
+ul,ol{ list-style:none;}
+a{ text-decoration:none;}
+img{ vertical-align:middle; border:0;}
+em,i,strong{ font-style:normal;}
+header:after,
+nav:after,
+section:after{
+			content:"";
+			clear:both;
+			display:block;
+}
+.wrap,header,footer{ width:640px; margin:0 auto; overflow:hidden;}
+section{ width:600px; margin:0 auto;}
+
