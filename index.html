@@ -1,212 +1,240 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
-<link href="css/all.mim.css" rel="stylesheet" rev="stylesheet" type="text/css" media="screen, projection"/>
-
+<meta charset="utf-8">
+<title>个人网站</title>
+<link rel="stylesheet" href="css/main.min.css">
 <script src="js/all.min.js"></script>
 </head>
-
 <body>
-<div id="myWeb">
-
-<!--下面为头部部分-->
-
-
-	<div id="header" class="clearfix">
-		<div class="head_left fl"></div>
-		<div class="head_right fr">
-			<ul id="nav">
-				<li><a href="#content1">HOME</a></li>
-				<li><a href="#content2">关于我</a></li>
-				<li><a href="#content3">我的作品</a></li>
-				<li><a href="javascript:;">效果展示</a></li>
-				<li><a href="javascript:;">联系我</a></li>
-				<li class="active"></li>
-			</ul>
-		</div>
-	</div>
-	
-
-
-<!--联系我吧-->
-
-<div id="link">
-
-	<div class="connect_me">
-		<h4><span>联系我吧</span><a href="javascript:;" id="closed">-</a></h4>
-		<div class="connect_message">
-			<div class="color_qq"><span><img src="images/qqColor.png" /></span></div>
-			<p><span>13967127196</span><br/><span>420097848</span><br/><span>rosy_peng@163.com</span></p>
-		</div>
-		<div class="qq"></div>
-	</div>
-
-</div>  
-
-
- <!--下面为内容部分-->
-	<div id="content">
-	
-		<!--图片切换-->	
-		<div id="content1">
-
-
-            <div class="imgCur"><img src="images/0.jpg"/></div>
-			<div><img src="images/1.jpg"/></div>
-			<div><img src="images/2.jpg"/></div>
-			<div><img src="images/3.jpg"/></div>
-
-			<ul id="imgTab" class="imgTab clearfix">
-				<li class="active"></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		
-			<a href="javascript:;" id="ImgLeft" class="imgL"><</a>
-			<a href="javascript:;" id="ImgRight" class="imgR">></a>
-		</div>
-		
-		<!--关于我-->	
-		
-		<div id="content2">
-	
-		<!--我能做什么-->	
-		
-		<div class="layer"></div>    <!--遮罩层-->	
-		<div class="ability">
-		
-		<h2></h2>
-		<ol>
-		<li>1.具备手写HTML、JS、CSS代码能力,能解决多浏览器兼容性问题；</li>
-		<li>2.能够灵活运用相关的类库(JQuery)的使用，能够自主编写JS实现相关的前台功能；</li>
-		<li>3.熟悉aJax/jsonP 了解php nodeJs MVC 等几种后台语言；</li>
-		<li>4.了解HTML5和CSS3，能结合JS一起运用在实际项目中；</li>
-		</ol>
-		
-		<div class="my_knowledge clearfix" id="language">
-		
-			<div class="html_knowledge"><span>Html/Css</span>
-			<p>精通HTMl/Css</p>
-			</div>
-			
-			<div class="js_knowledge"><span>Javascript</span>
-			<p>手写JS原生代码</p>
-			</div>
-		    <div class="h5_knowledge"><span>H5/Css3</span><p>结合JS运用</p></div>
-		</div>
-		
-		</div>
-
-		
-<!--		<div class="introduce">
-		<h4>自我介绍</h4>
-		<div class="text_intro"></div>
-		</div>-->
-		
-		</div>
-		
-		
-		<!--作品展示-->	
-		<div id="content3">
-		<!--我的作品-->
-		
-		
-<!-- 代码部分begin -->
-<div class="main">
-    <div class="view">
-      <img src="images/pic.jpg" alt="我的网站">
-      <div class="hover">
-          <h3>普通拖拽</h3>
-          <p>拖拽原理</p>
+<!--导航栏-->
+<a href="javascript:;" onclick="gotoTop();" class="totop"></a>
+<div class="topBar">
+	<div>
+    	<div class="logo">
+        	<img class="img" src="images/logo.jpg" alt="logo" />
+            <img src="images/logo.png" />
        </div>
-    </div>
-    <div class="view">
-      <img src="images/pic1.jpg" alt="我的网站">
-      <div class="hover">
-          <h3>对话框拉伸</h3>
-          <p>四面拉伸</p>
-       </div>
-    </div>
-    <div class="view">
-      <img src="images/pic2.jpg" alt="我的网站">
-      <div class="hover">
-          <h3>选项卡</h3>
-          <p>灰掉所有，点亮自己</p>
-       </div>
-    </div>
-    <div class="view">
-      <img src="images/pic3.jpg" alt="我的网站">
-      <div class="hover">
-          <h3>简易日历</h3>
-          <p>用数组和innerHTML结合应用</p>
-       </div>
-    </div>
-    <div class="view">
-      <img src="images/pic4.jpg" alt="我的网站">
-      <div class="hover">
-          <h3>数码时钟</h3>
-          <p>时间date以及定时器和charAt的结合应用</p>
-       </div>
-    </div>
-    <div class="view">
-      <img src="images/pic5.jpg" alt="我的网站">
-      <div class="hover">
-          <h3>模拟留言板</h3>
-          <p>DOM的应用操作</p>
-       </div>
+        <ul id="ul1">
+            <li><a href="javascript:;">我的主页</a></li>
+            <!--<li><a href="#">我的简历</a></li>-->
+            <li><a href="javascript:;">我的技能</a></li>
+            <li><a href="javascript:;">我的作品</a></li>
+            <li><a href="javascript:;">其他作品</a></li>
+            <li><a href="javascript:;">联系方式</a></li>
+            <li class="box"></li>
+		</ul>
     </div>
 </div>
-<!-- 代码部分end -->		
-		
-		
-<!--		<div id="show" class="show">
-		<a href="javascript:;">x</a>
-	
-			<div id="dragBox"></div>
-			
-		</div>
-		
-
-		
-		<div id="mypus" class="mypus clearfix">
-		<div class="drag"><div></div><img src="images/pic.jpg"/><span>普通拖拽</span></div>
-		<div><div></div><img src="images/pic1.jpg"/><span>图片描述1</span></div>
-		<div><div></div><img src="images/pic2.jpg"/><span>图片描述2</span></div>
-		<div><div></div><img src="images/pic3.jpg"/><span>图片描述3</span></div>
-		<div><div></div><img src="images/pic4.jpg"/><span>图片描述4</span></div>
-		<div><div></div><img src="images/pic5.jpg"/><span>图片描述5</span></div>		
-		</div>-->
-		
-		
-		
-		
-		
-		
-		
-		</div>
-		
-		
-		<div class="ad">
-		
-		<strong>人不能创造时机，但是它可以抓住那些出现的时机!</strong><span>-----座右铭</span>
-		
-		
-		</div>
-		<div id="content4">效果展示</div>
-		<div id="content5">联系我</div>
-
-	</div>
-	
-<!--下面为footer部分-->
-
-	<div id="footer">我是footer</div>
-	<div id="toUp"><strong>Top</strong></div>
+<!--主页面-->
+<!--banner-->
+<div style="height:94px;"></div>
+<div id="main">
+    <div class="page" id="page1">
+        <h1>我的专属个人网站</h1>
+        <div class="desk">
+            <div class="mac" id="mac">
+                <div>
+                    <a href="javascript:;" class="prev">prev</a>
+                    <a href="javascript:;" class="next">next</a>
+                    <ol>
+                        <li class="active"><span>1</span></li>   
+                        <li><span>2</span></li> 
+                        <li><span>3</span></li>  
+                        <li><span>4</span></li>  
+                        <li><span>5</span></li>              
+                    </ol>
+                </div>
+                <div class="focus">
+                    <!--<span></span>-->
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!--我的技能 -->
+    <div class="page" id="page2">
+        <h2>我的技能</h2>
+        <div class="intro" id="intro"></div>
+        <ul class="ch_grid">
+            <li class="img1">
+                <div class="ch_item">
+                    <div class="ch_info">
+                        <div class="ch_info_front ch_img_1"></div>
+                        <div class="ch_info_back">
+                            <h3>HTML</h3>
+                            <p>精通</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="img2">
+                <div class="ch_item">
+                    <div class="ch_info">
+                        <div class="ch_info_front ch_img_2"></div>
+                        <div class="ch_info_back">
+                            <h3>CSS</h3>
+                            <p>精通</p>
+                        </div>
+                    </div>
+                </div>
+            </li>           
+            <li class="img3">
+                <div class="ch_item">
+                    <div class="ch_info">
+                        <div class="ch_info_front ch_img_3"></div>
+                        <div class="ch_info_back">
+                            <h3>JS</h3>
+                            <p>熟练</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="img4">
+                <div class="ch_item">
+                    <div class="ch_info">
+                        <div class="ch_info_front ch_img_4"></div>
+                        <div class="ch_info_back">
+                            <h3>Jquery</h3>
+                            <p>熟练</p>
+                        </div>
+                    </div>
+                </div>
+            </li>           
+            <li class="img5">
+                <div class="ch_item">
+                    <div class="ch_info">
+                        <div class="ch_info_front ch_img_5"></div>
+                        <div class="ch_info_back">
+                            <h3>Ajax</h3>
+                            <p>熟练</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="img6">
+                <div class="ch_item">
+                    <div class="ch_info">
+                        <div class="ch_info_front ch_img_6"></div>
+                        <div class="ch_info_back">
+                            <h3>H5</h3>
+                            <p>了解</p>
+                        </div>
+                    </div>
+                </div>
+            </li>           
+            <li class="img7">
+                <div class="ch_item">
+                    <div class="ch_info">
+                        <div class="ch_info_front ch_img_7"></div>
+                        <div class="ch_info_back">
+                            <h3>CSS3</h3>
+                            <p>了解</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--css作品 -->
+    <div class="page" id="page3">
+        <h2>我的作品</h2>
+        <ul id="lagou">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <div id="change">
+            <span class="active">换一批</span>
+        </div>
+        </ul>
+        
+    </div>
+    <!--其他作品 -->
+    <div class="page" id="page4">
+        <h2>其他作品</h2>
+        <ul id="ul2">
+            <li>
+                <img src="images/img1.jpg" alt="">
+                <div>
+                    <em>
+                        <h3><a href="xg/hao123/mylovely.html" target="_blank">CSS写的hao123页面</a></h3>
+                        <p><a href="xg/hao123/mylovely.html" target="_blank">随手写的一个hao123页面</a></p>
+                    </em>
+                    <span class="bg"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/img2.jpg" alt="">
+                <div>
+                    <em>
+                        <h3><a href="xg/meituan/meituan.html" target="_blank">CSS写的美团页面</a></h3>
+                        <p><a href="xg/meituan/meituan.html" target="_blank">随手写的一个美团页面</a></p>
+                    </em>
+                    <span class="bg"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/img3.jpg" alt="">
+                <div>
+                    <em>
+                        <h3><a href="xg/juhuasuan/index.html" target="_blank">CSS写的聚划算手机页面</a></h3>
+                        <p><a href="xg/juhuasuan/index.html" target="_blank">随手写的一个聚划算手机页面</a></p>
+                    </em>
+                    <span class="bg"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/img4.jpg" alt="">
+                <div>
+                    <em>
+                        <h3><a href="xg/tmall/tmall.html" target="_blank">CSS写的天猫手机页面</a></h3>
+                        <p><a href="xg/tmall/tmall.html" target="_blank">随手写的一个天猫手机页面</a></p>
+                    </em>
+                    <span class="bg"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/img5.jpg" alt="">
+                <div>
+                    <em>
+                        <h3><a href="xg/bootstrap/bootstrap.html" target="_blank">CSS写的bootstrap页面</a></h3>
+                        <p><a href="xg/bootstrap/bootstrap.html" target="_blank">随手写的一个bootstrap页面</a></p>
+                    </em>
+                    <span class="bg"></span>
+                </div>
+            </li>
+            <li>
+                <img src="images/img6.jpg" alt="">
+                <div>
+                    <em>
+                        <h3><a href="xg/playerObject/index.html" target="_blank">添加傲视影音的页面Js效果</a></h3>
+                        <p><a href="xg/playerObject/index.html" target="_blank">随手添加了一下傲视影音的页面Js效果</a></p>
+                    </em>
+                    <span class="bg"></span>
+                </div>
+            </li>
+         </ul>
+    </div>
+    <!--联系方式 -->
+    <div class="page" id="page5">
+        <h2>联系方式</h2>
+        <div class="connect" id="connect">
+            <img src="images/tel.png" width="685" height="426">
+            <li class="name">Name：程莉莉  lily_cheng</li>
+            <li class="tel">Tel：18806211770</li>
+            <li class="mail">Mail：lily_cheng123@sina.com</li>
+            <li class="qq">QQ：798636989</li>
+            <li class="tome">联系我吧！~</li>
+        </div>
+    </div>
 </div>
-
-
-<div id="circle">拽我玩</div>
+<!--footer -->
+<div class="footer">
+    <div class="footerMain">
+        <p>Copyright © 2016 by lily_cheng版权所有</p>
+    </div>
+</div>
 </body>
 </html>
