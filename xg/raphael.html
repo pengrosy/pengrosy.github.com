@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>raphael饼图</title>
+<style>
+body {background:url(images/bg.jpg);}
+</style>
+<script src="js/raphael.js"></script>
+<script>
+function d2a(n)
+{
+	return n*Math.PI/180;
+}
+
+window.onload=function ()
+{
+	//1.画布
+	var page=Raphael(0, 0, 800, 600);
+	
+	//
+	var cx=400,cy=300,r=200;
+	
+	function pie(start, end, color)
+	{
+		function calcPath(cx, cy)
+		{
+			var start_x=cx+Math.sin(d2a(start))*r;
+			var start_y=cy-Math.cos(d2a(start))*r;
+			
+			var end_x=cx+Math.sin(d2a(end))*r;
+			var end_y=cy-Math.cos(d2a(end))*r;
+			
+			return [
+				'M', cx, cy,
+				'L', start_x, start_y,
+				
+				'A', r, r, 0, (end-start)>180?1:0, 1, end_x, end_y,
+				
+				'Z'
+			].join(' ');
+		}
+		
+		var path=page.path(calcPath(cx, cy));
+		
+		path.attr({
+			'fill': color,
+			'stroke': 'white',
+			'stroke-width': 3
+		});
+		
+		path.hover(function (){
+			var dis=40;
+			var center=(start+end)/2;
+			var a=Math.sin(d2a(center))*dis,b=Math.cos(d2a(center))*dis;
+			
+			var new_cx=cx+a,new_cy=cy-b;
+			
+			this.animate({path: calcPath(new_cx, new_cy)}, 600, 'elastic');
+		}, function (){
+			this.animate({path: calcPath(cx, cy)}, 600, 'elastic');
+		});
+	}
+	
+	//
+	var data=[123, 65, 90, 37, 210];
+	var sum=0;
+	for(var i=0;i<data.length;i++)
+		sum+=data[i];
+	
+	var ang=[];
+	for(var i=0;i<data.length;i++)
+		ang[i]=360*data[i]/sum;
+	
+	var now=0;
+	for(var i=0;i<ang.length;i++)
+	{
+		pie(now, now+ang[i], 'red');
+		now+=ang[i];
+	}
+};
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
+
+
+
+
+

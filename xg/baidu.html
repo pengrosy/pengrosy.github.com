@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>百度下拉搜索</title>
+<style>
+*{ margin:0; padding:0; list-style:none};
+input{ outline:none; border:none;}
+#div1{ width:640px; margin:50px auto; position:relative;}
+#ipt{ width:630px; height:30px; position:absolute; left:0; top:0; font-size:14px; padding:5px 0 5px 10px;}
+#btn{ width:100px; height:44px; position:absolute; right:-3px; top:0; background:#06F;}
+#ul1{ width:542px; border:1px solid #ccc; border-top:none; position:absolute; left:0; top:44px; display:none;}
+#ul1 li{ height:25px; line-height:25px;}
+#ul1 li a{ text-decoration:none; color:#333;}
+#ul1 li:hover{ background:#CCC;}
+</style>
+<script>
+function a(json){
+	console.log(json.s);
+	var oUl=document.getElementById("ul1");	
+	
+	if(json.s.length==0){
+		oUl.style.display="none";
+	}else{
+		oUl.style.display="block";
+		oUl.innerHTML="";
+		for(var i=0;i<json.s.length;i++){
+			var oLi=document.createElement("li");
+			oLi.innerHTML='<a href="https://www.baidu.com/s?ie=utf-8&wd='+json.s[i]+'">'+json.s[i]+'</a>';
+			oUl.appendChild(oLi);
+		}
+	}
+}
+</script>
+<script>
+window.onload=function(){
+	var oIpt=document.getElementById("ipt");
+	var oBtn=document.getElementById("btn");
+	oIpt.onkeyup=function(){
+		var oS=document.createElement("script");
+		oS.src='https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+oIpt.value+'&cb=a';
+		document.getElementsByTagName("head")[0].appendChild(oS);
+	}
+	oBtn.onclick=function(){
+		//alert();
+		if(oIpt.value){
+			window.location='https://www.baidu.com/s?ie=utf-8&wd='+oIpt.value;
+		}
+	}
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+    <input type="text" value="" id="ipt">
+    <input type="button" value="百度一下" id="btn">
+    <ul id="ul1">
+        <!--<li><a href="#">lol</a></li>-->
+    </ul>
+</div>
+</body>
+</html>

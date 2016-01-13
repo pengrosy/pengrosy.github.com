@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>h5倒影</title>
+<style>
+body{ background:#000;}
+#div1{ width:300px; height:300px; background:url(images/girl.jpg) no-repeat; position:absolute; left:40%;}
+#div1 span{ width:100%; height:100%; background:url(images/girl.jpg) no-repeat; position:absolute; left:0; top:310px;
+	transform:scale(1,-1);
+	-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+	opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+<div id="div1">
+	<span></span>
+</div>
+</body>
+</html>

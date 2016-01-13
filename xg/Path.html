@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>path菜单</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{ background:url(images/bg.jpg);}
+#bBox{ opacity:0;width:400px;height:400px;border:#000 solid 1px; border-radius:50%; position:absolute;left:150px;top:50px;}
+.sBox{width:50px;height:50px;background:red; border-radius:50%; position:absolute;left:0;top:0;margin-left:-25px;margin-top:-25px;}
+input{ font-size:40px; position:absolute;left:320px;top:210px; z-index:2;}
+</style>
+<script>
+window.onload=function(){
+	var bBox=document.getElementById('bBox');
+	var oBtn=document.getElementById('btn1');
+	var r=bBox.offsetWidth/2;
+	//a=sin(ang)*r	b=cos(ang)*r
+	//sBox.left=bBox.left+r+a	top=bBox.top+r-b;
+	
+	
+	//1.创建一堆，平均分布到大圆上
+	var count=5;	//一圈360	360/5=72	0*72=0	1*72=72	2*72=144 n*360/count
+	for(var i=0;i<count;i++){
+		var sBox=document.createElement('div');
+		sBox.className='sBox';
+		document.body.appendChild(sBox);
+		//setPos(sBox,i*(360/count));	
+		setPos(sBox,0);		//在90度范围内摆放
+		sBox.rotate=0;	//创建每一个小圆的时候，定义一个js属性，存角度0
+	}
+	
+	//2.添加事件
+	oBtn.onclick=function(){
+		var sBox=document.getElementsByClassName('sBox');
+		this.disabled=true;
+		if(oBtn.value=='-'){
+			//收
+			for(var i=0;i<sBox.length;i++){
+				//setPos(sBox[i],0);	
+				move(sBox[i],0);	//0==角度
+			}
+			oBtn.value='+';
+		}else if(oBtn.value=='+'){
+			//展	
+			for(var i=0;i<sBox.length;i++){
+				//setPos(sBox[i],i*(90/(count-1)));	
+				move(sBox[i],i*(90/(count-1)));
+			}
+			oBtn.value='-';
+		}
+	};
+	
+	function move(obj,iTarget){
+		var start=obj.rotate;
+		var dis=iTarget-start;
+		var count=Math.round(700/30);
+		var n=0;
+		
+		clearInterval(obj.timer);
+		obj.timer=setInterval(function(){
+			n++;
+			var a=1-n/count;
+			var cur=start+dis*(1-a*a*a);
+			setPos(obj,cur)//obj.style.left=?
+			
+			//更新角度属性，以便下start读取
+			obj.rotate=cur;
+			
+			if(n==count){
+				clearInterval(obj.timer);
+				oBtn.disabled=false;
+			}
+		},30);
+	}
+	
+	
+	function setPos(obj,deg){
+		var a=Math.sin(d2a(deg))*r;
+		var b=Math.cos(d2a(deg))*r;
+		obj.style.left=bBox.offsetLeft+r+a+'px';
+		obj.style.top=bBox.offsetTop+r-b+'px';	
+	}
+	
+	function d2a(n){
+		return n*Math.PI/180;	//返回	角度转弧度
+	}
+};
+</script>
+</head>
+
+<body>
+<input type="button" value="+" id="btn1">
+<div id="bBox"></div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>svg-path-饼图</title>
+<style>
+body{ background:url(images/bg.jpg);}
+#div1 {display:none; position:absolute; background:#CCC; border:1px solid black;}
+</style>
+<script>
+function d2a(n)
+{
+	return n*Math.PI/180;
+}
+
+function rnd(n, m)
+{
+	return Math.floor(Math.random()*(m-n)+n);
+}
+
+window.onload=function ()
+{
+	var oSvg=document.getElementById('svg1');
+	
+	var cx=400,cy=300,r=200;
+	
+	function pie(startAng, endAng, color, value)
+	{
+		var oPath=document.createElementNS('http://www.w3.org/2000/svg', 'path');
+		
+		//起点坐标
+		var start_x=cx+Math.sin(d2a(startAng))*r;
+		var start_y=cy-Math.cos(d2a(startAng))*r;
+		
+		//终点坐标
+		var end_x=cx+Math.sin(d2a(endAng))*r;
+		var end_y=cy-Math.cos(d2a(endAng))*r;
+		
+		//麻烦
+		oPath.setAttribute('d', [
+			//#1
+			'M', cx, cy,
+			'L', start_x, start_y,
+			
+			//#2
+			'A', r, r, 0, (endAng-startAng)<180?0:1, 1, end_x, end_y,
+			
+			//#3
+			'Z'
+		].join(' '));
+		
+		oPath.style.fill=color;
+		
+		//
+		oSvg.appendChild(oPath);
+		
+		//-----------------------
+		oPath.onmouseover=function ()
+		{
+			var oDiv=document.getElementById('div1');
+			
+			oDiv.style.display='block';
+			
+			var oSpan=oDiv.getElementsByTagName('span')[0];
+			oSpan.innerHTML=value;
+			
+			document.onmousemove=function (ev)
+			{
+				oDiv.style.left=ev.pageX+10+'px';
+				oDiv.style.top=ev.pageY+'px';
+			};
+		};
+		oPath.onmouseout=function ()
+		{
+			var oDiv=document.getElementById('div1');
+			
+			oDiv.style.display='none';
+		};
+	}
+	
+	//生成
+	var data=[120, 450, 930, 270, 630];
+	var sum=0;
+	for(var i=0;i<data.length;i++)
+	{
+		sum+=data[i];
+	}
+	
+	var ang=[];
+	for(var i=0;i<data.length;i++)
+	{
+		ang[i]=360*data[i]/sum;
+	}
+	
+	var now=0;
+	for(var i=0;i<ang.length;i++)
+	{
+		pie(now, now+ang[i], 'rgb('+rnd(0,256)+','+rnd(0,256)+','+rnd(0,256)+')', data[i]);
+		now+=ang[i];
+	}
+};
+</script>
+</head>
+
+<body>
+<svg width="800" height="600" id="svg1">
+</svg>
+<div id="div1">
+	本月产量：<span>0</span>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
