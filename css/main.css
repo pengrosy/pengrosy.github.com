@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0; list-style:none;}
+html{ overflow-x:hidden;}
+body{ height:2222px; background:url(../images/bg.jpg);font-family:"Microsoft Yahei", Verdana, Geneva, sans-serif;}
+select,input,img{ vertical-align:middle; outline:none;}
+a{ text-decoration:none; blr:expression(this.onFocus=this.blur())}
+/*导航栏*/
+#main{ position:relative; left:0; top:0;}
+.topBar{ width:100%; height:92px; background:url(../images/nav.jpg) repeat-x; position:fixed; z-index:10; box-shadow:0 10px 10px #f2f2f2; line-height:92px;}
+.topBar div{ width:1004px; margin:0 auto;}
+.topBar div .logo{ width:80px; height:80px; display:inline; color:#fff; font-size:20px;}
+.topBar div .logo .img{ width:80px; height:80px; border-radius:50%;}
+.topBar div ul{ position:relative; top:24px; float:right;margin-right:190px;display:inline;}
+.topBar div ul li{ position:relative; float:left; z-index:2; width:120px; height:40px; line-height:40px; text-align:center; -display:inline; -zoom:1; font-size:16px;}
+.topBar div ul li a{ color:#fff;}
+.topBar div ul li.box{ position:absolute; left:0; top:0; z-index:1; width:100px; margin-left:10px; background:#218aad; border-radius:10px;}
+/*主页面*/
+/*banner*/
+#page1,#page2,#page3,#page4,#page5{ overflow:hidden;}
+#page1{ width:100%; font-family:"Microsoft Yahei", Helvetica, sans-serif; -background:red;}
+#page1 h1{ text-align:center; font-size:28px; font-weight:normal; margin:30px auto;}
+#page1 .desk{ background:url(../images/desk.jpg) repeat-x bottom left; padding-bttom:44px;}
+#page1 .desk .mac{ position:relative; width:841px; height:638px; background:url(../images/mac.png) no-repeat top center; margin:30px auto 0 auto; padding-top:31px;}
+#page1 .desk .mac .prev{ width:58px; height:58px; background:url(../images/arrows.png) left top; position:absolute; left:-88px; top:220px; z-index:2; text-indent:-9999px;}
+#page1 .desk .mac .prev:hover{ background:url(../images/arrows.png) left bottom;}
+#page1 .desk .mac .next{ width:58px; height:58px; background:url(../images/arrows.png) right top; position:absolute; right:-88px; top:220px;  z-index:2; text-indent:-9999px;}
+#page1 .desk .mac .next:hover{ background:url(../images/arrows.png) right bottom;}
+#page1 .desk .mac ol{ position:absolute; left:360px; top:488px;}
+#page1 .desk .mac ol li{ float:left; width:15px; height:15px; margin-right:10px;}
+#page1 .desk .mac ol li span{ display:block; background:url(../images/btn.png) no-repeat; background-position:right 1px; text-indent:-9999px; cursor:pointer;}
+#page1 .desk .mac ol li.active span{ background-position:left 1px;}
+#page1 .desk .mac .focus{ position:relative; width:774px; height:444px; background:url(../images/focus1.jpg) no-repeat; margin-left:34px;}
+#page1 .desk .mac .focus span{ position:absolute; left:0; top:0; width:110px; height:111px; background:url(../images/focus0.jpg) no-repeat; background-position:0 0;}
+/*我的技能*/
+#page2{-background:green;}
+h2{ margin:20px auto; background:url(../images/h2bg.png) no-repeat center; height:75px; text-align:center; font-weight:normal; line-height:40px; margin-bottom:-10px;}
+#page2 .intro{ width:800px; margin:20px auto; text-indent:2em;}
+#page2 span{ color:rgba(0,0,0,1); text-shadow:0 0 5px #000; opacity:0; transition:0.7s all ease; font-size:22px;}
+#page2 span.active{ opacity:1;text-shadow:0 0 0 #000;}
+.ch_grid{ width: 100%; height:360px; margin:50px 0 0 0; padding:0; list-style:none; text-align:center; position:relative; }
+.ch_grid li{ display: inline-block; width:130px; height:130px; margin:20px;}
+.ch_grid:after,.ch_grid:before{ content:''; display:table;}
+.ch_grid:before{ clear:both;}
+.ch_item{ width:100%; height:100%; cursor: default; position:relative;
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	-ms-perspective: 800px;
+	perspective: 800px;/*设置镜头到元素平面的距离*/
+	}
+.ch_info{ width:100%; height:100%; position: absolute;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;/* 子元素将保留其 3D 位置。 */
+
+	}
+.ch_info>div{ width: 100%; height:100%; position: absolute; background-position: center center; border-radius:50%;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	-o-transform-origin: 50% 0%;
+	-ms-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	}
+.ch_info .ch_info_front{ box-shadow:inset 0px 0px 0px 8px rgba(0,0,0,0.3)}
+.ch_info .ch_info_back{ background:#000; color:#FFF;
+	/*translate3d(x,y,z)定义 3D 平移。 rotate3d(x,y,z,angle) 定义 3D 旋转。*/ 
+	-webkit-transform: translate3d(0,0,-210px) rotate3d(1,0,0,90deg);
+	-moz-transform: translate3d(0,0,-210px) rotate3d(1,0,0,90deg);
+	-o-transform: translate3d(0,0,-210px) rotate3d(1,0,0,90deg);
+	-ms-transform: translate3d(0,0,-210px) rotate3d(1,0,0,90deg);
+	transform: translate3d(0,0,-210px) rotate3d(1,0,0,90deg);
+	opacity:0;
+	}
+.ch_item:hover .ch_info_front{
+	-webkit-transform: translate3d(0,210px,0) rotate3d(1,0,0,-90deg);
+	-moz-transform: translate3d(0,210px,0) rotate3d(1,0,0,-90deg);
+	-o-transform: translate3d(0,210px,0) rotate3d(1,0,0,-90deg);
+	-ms-transform: translate3d(0,210px,0) rotate3d(1,0,0,-90deg);
+	transform: translate3d(0,210px,0) rotate3d(1,0,0,-90deg);
+	opacity: 0;
+	}
+.ch_item:hover .ch_info_back{
+	-webkit-transform: rotate3d(1,0,0,0deg);
+	-moz-transform: rotate3d(1,0,0,0deg);
+	-o-transform: rotate3d(1,0,0,0deg);
+	-ms-transform: rotate3d(1,0,0,0deg);
+	transform: rotate3d(1,0,0,0deg);
+	opacity: 1;
+	}
+.img1{ position:absolute; left:180px; top:90px;}
+.img2{ position:absolute; left:320px; top:-40px;}
+.img3{ position:absolute; left:460px; top:90px;}
+.img4{ position:absolute; left:600px; top:-40px;}
+.img5{ position:absolute; left:740px; top:90px;}
+.img6{ position:absolute; left:880px; top:-40px;}
+.img7{ position:absolute; left:1020px; top:90px;}
+.ch_info h3{color: #fff;font-size: 20px;margin: 0 15px;	padding: 40px 0 0 0;height: 50px;font-family: "张海山锐线体简", "微软雅黑", "Adobe 明體 Std L"; text-shadow:0 0px 1px #FFF 1 1px 2px rgba(0,0,0,0.3)}
+.ch_info p {color: #fff;padding: 10px 15px; font-size: 14px;border-top: 1px solid rgba(255,255,255,0.5);}
+.ch_img_1{background-image: url(../images/1.png);}
+.ch_img_2{background-image: url(../images/2.png);}
+.ch_img_3{background-image: url(../images/3.png);}
+.ch_img_4{background-image: url(../images/4.png);}
+.ch_img_5{background-image: url(../images/5.png);}
+.ch_img_6{background-image: url(../images/6.png);}
+.ch_img_7{background-image: url(../images/7.png);}
+/*我的作品*/
+#page3{ position:relative; height:600px;}
+#page3 #lagou{ width:960px; height:430px; margin:10px auto;}
+#page3 #lagou li{float:left; position:relative;width:300px; height:200px; line-height:200px; font-size:30px; text-align:center; box-shadow:2px 2px 5px #999; border-radius:15px; overflow:hidden; margin:10px; z-index:3;}
+#page3 #lagou li img{ position:absolute; left:0; top:0; width:300px; height:200px; border-radius:15px;}
+#page3 #lagou li span{ position:absolute;left:-300px;top:0; width:300px; height:200px; background:pink; color:#fff; opacity:0.8; border-radius:15px; z-index:2; cursor:pointer;}
+#page3 #lagou li span a{ color:#000;}
+#page3 #lagou #change{ position:absolute; left:47%; bottom:0; height:50px;}
+#page3 #lagou #change span{ width:80px; height:40px; text-align:center; line-height:40px; display:inline-block; border:1px solid #000; border-radius:20px; cursor:pointer;}
+#page3 #lagou #change span:hover{ background:#0CF;}
+#page3 #lagou #change span.active{ background:#69F;}
+/*其他作品*/
+#page4{ -background:#FF0;}
+#page4 a{ color:#fff;}
+#page4 #ul2 {width:948px; margin:10px auto;}
+#page4 #ul2 li {float:left; width:296px; height:204px; box-shadow:0 0 5px #999; margin:10px; position:relative; overflow:hidden; border-radius:15px;}
+#page4 #ul2 li img {width:296px; height:204px;}
+#page4 #ul2 li div {height:80px; width:100%; position:absolute; left:0; bottom:-80px; opacity:0; filter:alpha(opacity:0); border-radius:15px;}
+#page4 #ul2 li div .bg {height:80px; border-top:1px solid white; width:100%; background:black; position:absolute; left:0; top:0; opacity:0.6; filter:alpha(opacity:60); z-index:1; border-radius:0 0 15px 15px;}
+#page4 #ul2 li div em {position:absolute; left:0; top:0; font-style:normal; color:#fff; z-index:2;}
+#page4 #ul2 li h3 {padding:4px; font-size:20px; font-weight:normal;}
+#page4 #ul2 li p {padding:4px; line-height:22px; cursor:pointer;}
+/*联系方式*/
+#page5{}
+#page5 .connect{ width:660px; border-radius:15px;color:#333;-border:2px dashed #666666;text-align:center; margin:10px auto 40px auto; position:relative;height:300px;overflow:hidden;}
+#page5 .connect li{ font-size:26px; color:#333; font:allura; opacity:0;}
+#page5 .connect li.name{ position:absolute; left:0; top:15px;}
+#page5 .connect li.tel{ position:absolute; left:0; top:75px;}
+#page5 .connect li.mail{ position:absolute; left:0; top:135px;}
+#page5 .connect li.qq{ position:absolute; left:0; top:195px;}
+#page5 .connect li.tome{ position:absolute; left:0; top:255px;}
+/*footer*/
+.footer{ text-align:center; background:url(../images/footerbg.png) repeat-x left 88px; height:220px; color:#fff; font-size:14px;}
+.footerMain{ width:960px; height:120px; margin:0 auto; padding-top:100px; background:url(../images/pen.png) no-repeat right top;}
+.footerMain p{ margin:45px 0 30px 50px;}
