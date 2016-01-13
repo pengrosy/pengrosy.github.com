@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>h5写的时钟，可拖拽</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+html{ overflow:hidden;}
+body{ background:url(images/bg.jpg);}
+#div1{ position:relative; width:220px; height:220px; border:10px solid #707289; border-radius:50%; box-shadow:0 0 5px #000,inset 2px 2px 5px #fff; background:#eff2f7;}
+#div1 #hours,#div1 #minutes{-webkit-transform-origin:center bottom;}
+#div1 #seconds{-webkit-transform-origin:center 85px;}
+#div1 #hours{ width:6px; height:60px; background:#000; position:absolute; left:50%; top:50%; margin-left:-3px; margin-top:-60px;}
+#div1 #minutes{ width:4px; height:70px; background:#000; position:absolute; left:50%; top:50%; margin-left:-2px; margin-top:-70px;}
+#div1 #seconds{ width:2px; height:100px; background:red; position:absolute; left:50%; top:50%; margin-left:-1px; margin-top:-85px;}
+#div1 #cap{ width:10px; height:10px; background:#903; position:absolute; left:50%; top:50%; margin-left:-5px; margin-top:-5px; border-radius:50%;}
+#div1 span{ width:4px; height:4px; background:#666; position:absolute; left:50%; top:0; margin-left:-2px; border-radius:50%;
+-webkit-transform-origin:center 110px;
+}
+#div1 span.on{ width:4px; height:8px; background:#333; margin-left:-2px; border-radius:0;}
+#div1 span em{ width:30px; text-align:center; font-style:normal; font-size:28px; position:absolute; left:50%; top:10px; margin-left:-15px;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById("div1");
+	var oH=document.getElementById("hours");
+	var oM=document.getElementById("minutes");
+	var oS=document.getElementById("seconds");
+	for(var i=0;i<60;i++){
+		var oSpan=document.createElement("span");
+		oDiv.appendChild(oSpan);
+		oSpan.style.transform="rotate("+i*6+"deg)";
+		if(i%5==0){
+			oSpan.classList.add("on");
+			if(i==0){
+				oSpan.innerHTML="<em>12</em>";
+			}else{
+				oSpan.innerHTML="<em>"+i+"</em>";
+				oSpan.children[0].innerHTML=i/5;
+				oSpan.children[0].style.transform="rotate("+-i*6+"deg)";
+			}
+		}
+	}
+	clock();
+	setInterval(clock,30);
+	function clock(){
+		var oDate=new Date();
+		var iH=oDate.getHours();
+		var iM=oDate.getMinutes();
+		var iS=oDate.getSeconds();
+		var iMs=oDate.getMilliseconds();
+		oH.style.transform="rotate("+(iH*30+iM/60*30)+"deg)";
+		oM.style.transform="rotate("+(iM*6+iM/60*6)+"deg)";
+		oS.style.transform="rotate("+(iS*6+iMs/1000*6)+"deg)";
+	}
+	/*var oDiv=document.getElementById("div1");
+	var x=0;
+	var y=0;
+	oDiv.onmousedown=function(ev){
+		var disX=ev.clientX-x;
+		var disY=ev.clientY-y;
+		document.onmousemove=function(ev){
+			x=ev.clientX-disX;
+			y=ev.clientY-disY;
+			oDiv.style.transform="translate("+x+"px,"+y+"px)";
+			//console.log(x,y,disX,disY);
+		};
+		document.onmouseup=function(){
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+		return false;
+	};*/
+	var speedX=0;
+	var speedY=0;	
+	var lastX=0;
+	var lastY=0;
+	var timer=null;
+	oDiv.onmouseover=function(){
+	} 
+	oDiv.onmousedown=function(ev){
+		var oEvt=ev||event;
+		var disX=oEvt.clientX-oDiv.offsetLeft;
+		var disY=oEvt.clientY-oDiv.offsetTop;
+		document.onmousemove=function(ev){
+			var oEvt=ev||event;
+			oDiv.style.left=oEvt.clientX-disX+"px";		
+			oDiv.style.top=oEvt.clientY-disY+"px";			
+			speedX=oDiv.offsetLeft-lastX;
+			speedY=oDiv.offsetTop-lastY;			
+			lastX=oDiv.offsetLeft;
+			lastY=oDiv.offsetTop;			
+		};
+		document.onmouseup=function(){
+			document.onmousemove=null;
+			document.onmouseup=null;
+			oDiv.releaseCapture && oDiv.releaseCapture();			
+			move();
+		};
+		oDiv.setCapture && oDiv.setCapture();
+		return false;
+	};	
+	function move(){
+		clearInterval(timer);
+		timer=setInterval(function(){
+			speedY+=3;
+			var l=oDiv.offsetLeft+speedX;
+			var t=oDiv.offsetTop+speedY;	
+			if(l>=document.documentElement.clientWidth-oDiv.offsetWidth){
+				l=document.documentElement.clientWidth-oDiv.offsetWidth;
+				speedX*=-0.8;
+				speedY*=0.8;
+			}else if(l<=0){
+				l=0;
+				speedX*=-0.8;
+				speedY*=0.8;
+			};
+			if(t>=document.documentElement.clientHeight-oDiv.offsetHeight){
+				t=document.documentElement.clientHeight-oDiv.offsetHeight;
+				speedY*=-0.8;
+				speedX*=0.8;
+			}else if(t<=0){
+				t=0;
+				speedY*=-0.8;
+				speedX*=0.8;
+			};
+			oDiv.style.left=l+"px";
+			oDiv.style.top=t+"px";
+			
+			if(Math.abs(speedX)<1){
+				speedX=0;
+			}
+			if(Math.abs(speedY)<1){
+				speedY=0;
+			}
+			if(speedX==0 && speedY==0 && t==document.documentElement.clientHeight-oDiv.offsetHeight){
+				clearInterval(timer);
+			}
+		},30);
+	}
+}
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<div id="hours"></div>
+	<div id="minutes"></div>
+	<div id="seconds"></div>
+	<div id="cap"></div>
+    <!--<span><em>12</em></span>-->
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>放大镜</title>
+<style>
+*{ margin:0; padding:0; list-style:none;}
+body{ background:url(images/bg.jpg);}
+#div1{ width:600px; height:350px; float:left; position:relative;}
+#div1 img{ width:600px; height:350px;}
+#mask{ width:100px; height:100px; background:red; position:absolute; left:0; top:0; display:none;}
+#div2{ width:600px; height:350px; position:relative; margin-left:650px; display:none; overflow:hidden;}
+#img{ width:900px; position:absolute; left:0; top:0;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv1=document.getElementById('div1');
+	var oMask=document.getElementById('mask');
+	var oDiv2=document.getElementById('div2');
+	var oImg=document.getElementById('img')
+	oDiv1.onmouseover=function(){
+		oMask.style.display=oDiv2.style.display="block";
+	};
+	oDiv1.onmouseout=function(){
+		oMask.style.display=oDiv2.style.display="none";
+	};
+	oDiv1.onmousemove=function(ev){
+		var oEvt=ev||event;
+		var l=oEvt.clientX-oMask.offsetWidth/2;
+		var t=oEvt.clientY-oMask.offsetHeight/2;
+		if(l<0) l=0;
+		if(t<0) t=0;
+		if(l>oDiv1.offsetWidth-oMask.offsetWidth){
+			l=oDiv1.offsetWidth-oMask.offsetWidth
+		}
+		if(t>oDiv1.offsetHeight-oMask.offsetHeight){
+			t=oDiv1.offsetHeight-oMask.offsetHeight
+		}
+		oMask.style.left=l+"px";
+		oMask.style.top=t+"px";
+		//mask.left/dismask=img.left/disimg
+		//img.left=mask.left/(div1.w-mask.w)*(img.w-div2.w)
+		oImg.style.left=oMask.offsetLeft/(oDiv1.offsetWidth-oMask.offsetWidth)*(oDiv2.offsetWidth-oImg.offsetWidth)+'px';
+		oImg.style.top=oMask.offsetTop/(oDiv1.offsetHeight-oMask.offsetHeight)*(oDiv2.offsetHeight-oImg.offsetHeight)+'px';
+	};
+};
+</script>
+</head>
+
+<body>
+<div id="div1">
+	<div id="mask"></div>
+    <img src="images/mao.jpg">
+</div>
+<div id="div2">
+	<img src="images/mao.jpg" id="img">
+</div>
+</body>
+</html>
