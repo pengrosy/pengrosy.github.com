@@ -14,7 +14,7 @@ a{ text-decoration:none; blr:expression(this.onFocus=this.blur())}
 .topBar div ul{ position:relative; top:24px; width: 100%;display:inline;display: flex;}
 .topBar div ul li{ position:relative; float:left; z-index:2; width:120px; height:40px; line-height:40px; text-align:center; -display:inline; -zoom:1; font-size:16px;flex: 1;}
 .topBar div ul li a{ color:#fff;}
-.topBar div ul li.box{ position:absolute; left:0; top:0; z-index:1; width:12%; margin-left:10px; background:#218aad; border-radius:10px;}
+.topBar div ul li.box{ position:absolute; left:0; top:0; z-index:1; width:146px; margin-left:10px; background:#218aad; border-radius:10px;}
 /*主页面*/
 /*banner*/
 #page1,#page2,#page3,#page4,#page5{ overflow:hidden;}
@@ -142,6 +142,28 @@ h2{ margin:20px auto; background:url(../images/h2bg.png) no-repeat center; heigh
 #page5 .connect li.mail{ position:absolute; left:0; top:135px;}
 #page5 .connect li.qq{ position:absolute; left:0; top:195px;}
 #page5 .connect li.tome{ position:absolute; left:0; top:255px;}
+/*项目实例*/
+#page6{
+
+}
+#page6 .project{
+	display: flex;
+    width: 800px;
+    margin: 40px auto 0;
+}
+#page6 .project .projectName{
+	display: inline-block;
+    flex: 1;
+    text-align: center;
+}
+#page6 .project .projectName a{
+	font-size: 26px;
+	color: #333;
+}
+#page6 .project .projectName a:hover{
+	font-size: 26px;
+	color: #69F;
+}
 /*footer*/
 .footer{ text-align:center; background:url(../images/footerbg.png) repeat-x left 88px; height:220px; color:#fff; font-size:14px;}
 .footerMain{ width:960px; height:120px; margin:0 auto; padding-top:100px; background:url(../images/pen.png) no-repeat right top;}
