@@ -11,10 +11,10 @@ a{ text-decoration:none; blr:expression(this.onFocus=this.blur())}
 .topBar div{ width:1004px; margin:0 auto;}
 .topBar div .logo{ width:80px; height:80px; display:inline; color:#fff; font-size:20px;}
 .topBar div .logo .img{ width:80px; height:80px; border-radius:50%;}
-.topBar div ul{ position:relative; top:24px; float:right;margin-right:190px;display:inline;}
-.topBar div ul li{ position:relative; float:left; z-index:2; width:120px; height:40px; line-height:40px; text-align:center; -display:inline; -zoom:1; font-size:16px;}
+.topBar div ul{ position:relative; top:24px; width: 100%;display:inline;display: flex;}
+.topBar div ul li{ position:relative; float:left; z-index:2; width:120px; height:40px; line-height:40px; text-align:center; -display:inline; -zoom:1; font-size:16px;flex: 1;}
 .topBar div ul li a{ color:#fff;}
-.topBar div ul li.box{ position:absolute; left:0; top:0; z-index:1; width:100px; margin-left:10px; background:#218aad; border-radius:10px;}
+.topBar div ul li.box{ position:absolute; left:0; top:0; z-index:1; width:12%; margin-left:10px; background:#218aad; border-radius:10px;}
 /*主页面*/
 /*banner*/
 #page1,#page2,#page3,#page4,#page5{ overflow:hidden;}

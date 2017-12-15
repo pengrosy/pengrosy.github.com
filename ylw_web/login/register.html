@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员注册</title>
+<link rel="stylesheet" href="css/login.css" />
+</head>
+
+<body class="bg">
+   <div class="line"></div>
+   <div class="login clearfix">
+     <div class="log"><img src="images/log.png" /></div>
+     
+     <div class="loginReg_conrtent">
+     <div class="register_left fl">
+       <h4>会员注册</h4> <a href="login.html" class="loginReg">直接登录</a>
+       <p><label>手机号码</label><input type="text" placeholder="可用作登录名" id="mob"/><span class="tip_m" id="tip_m" style="color:rgb(255, 181, 51);">请正确输入手机号</span></p>
+       <p ><label>验证码</label><input type="text" class="code"/><em class="get_code">获取短信验证码</em></p> 
+       <p><label>登录密码</label><input type="password" id="psd" placeholder="6-20位字母、数字和符号"/><span><em id="low">弱</em> <em id="middle">中</em> <em id="high">强</em></span></p>
+       <div class="hide"><span class="error">请设置登录密码</span></div>
+       <p><label>确认密码</label><input type="password" id="re_psd" placeholder="再次输入密码"/></p>
+       <div class="hide"><span class="error">请再次输入密码</span></div>
+       <div class="agreeActive" id="agree">同意<span>《去哪养老网服务条款》</span></div>         
+
+	   <div class="register_btn"><a href="javascript:;" id="registerBtn" class="registerBtn">立即注册</a></div>
+       
+     </div>
+     
+     <div class="register_right fr"><img src="images/register_img.jpg" /></div> 
+     </div>
+     
+     
+     <div class="footer">Copyright © 2015-2025 去哪养老网 www.5199yl.com 版权所有</div>
+   </div>
+</body>
+</html>
+<script src="js/checkPass.js"></script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+.map img{position:relative;}
+.jiantou{width:100px;height:100px;position:absolute;background:url(images/jiantou.png) no-repeat;animation:jiantou 1.5s linear infinite; }
+
+@keyframes jiantou {
+
+	0%{
+		top:10px;	
+	}
+	30%{
+		top:13px;	
+	}
+	50%{
+		top:18px;	
+	}
+	75%{
+		top:13px;	
+	}
+	100%{
+		top:8px;	
+	}
+
+
+ }
+
+
+.hangzhou{bottom:190px;right:630px;}
+</style>
+</head>
+
+<body>
+  <div class="map">
+    <img src="images/map.jpg" />
+    <div class="jiantou hangzhou"><span>杭州</span></div>
+  </div>
+
+
+
+
+</body>
+</html>

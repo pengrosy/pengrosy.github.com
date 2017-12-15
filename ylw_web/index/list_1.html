@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>去哪养老网</title>
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/list2.css">
+</head>
+
+
+<body>
+    <div class="header">
+        <div class="top">
+            <div class="inner clear">
+                <ul>
+                    <li>您好，欢迎来到去哪养老网！</li>
+                    <li><a href="../login/login.html" class="login">登录</a></li>
+                    <li><a href="../login/register.html">注册</a></li>
+                </ul>
+                <ol>
+                    <li><a href="../html/system/Order_information.html">我的订单</a></li>
+                    <li><a href="../html/system/User_message.html">个人中心</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                    <li><a href="javascript:;">机构入口</a></li>
+                    <li class="contact" style="position:relative;"><a href="javascript:;">关注我们</a><i></i></li>
+                    <!--关注我们，鼠标移上去出现二维码-->
+                  <div class="erweima" id="erweima">
+                     <div class="ewm_box">
+                        <p>扫描二维码</p>
+                        <p>关注去哪养老网</p>
+                        <p><img src="../images/2-code.png" style="width:56px;height:56px;"></p>
+                     </div>
+                  
+                  </div>  
+                   
+                </ol>
+                 
+            </div>
+        </div>
+        <div class="menu_top">
+            <div class="inner">
+                <div class="menu_l">
+                    <img src="images/logo.png" >
+                    <a href="javascript:;" class="show_city" id="show_city"><span class="city" id="city">杭州</span></a>                      
+                     <ul class="choose_city">
+              
+          						<!--点击或者鼠标以上杭州后，显示出来选择地区-->
+           						<ul class="allProvince" id="all_city" style="position:absolute;left:210px;">
+                          <div class="provice" style="width:390px;background:#fff; margin-left:20px;">
+                          
+                       		 <h4><a href="javascript:;">热门</a>  <a href="javascript:;">ABCDEF</a> <a href="javascript:;">GHIJKLM</a>  <a href="javascript:;">NOPQRS</a>  <a href="javascript:;">TWXYZ</a></h4>
+                                <div class="cityChoose_show cityChoose_show2 active clear">
+                                <li><b>A</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                                <li><b>B</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                                <li><b>C</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>D</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>E</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>F</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>
+
+
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                                <li><b>A</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                                <li><b>B</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                                <li><b>C</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>D</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>E</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>F</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>
+                                
+                                
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>G</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>H</b><div><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a></div></li>
+                       			    <li><b>I</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>J</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>K</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>L</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>                                
+                                
+   
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>M</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>N</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                       			    <li><b>O</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>P</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>Q</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>R</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>       
+   
+ 
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>S</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>T</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                       			    <li><b>U</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>V</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>W</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>X</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>     
+                            </div>
+                          </ul>
+
+
+					</ul>  
+                             
+                </div>
+                <div class="menu_m">
+                    <input type="text" placeholder="请输入机构关键字" class="search">
+                    <a href="javascript:;" class="submit">搜索</a>               
+                </div>
+                <div class="menu_r">
+                    <img src="images/hotline.png" ></div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="inner">
+                <ul class="list" id="navUl">
+                    <li>
+                        <a href="index.html" class="">首页</a>
+                    </li>
+                    <li>
+                        <a href="list_2.html" class="two">养生度假</a>
+                    </li>
+                    <li>
+                        <a href="list_1.html" class="two on">找养老院</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="three">机票</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="four">火车票</a>
+                    </li>
+                    <li>
+                        <a href="Nursing_Grad.html" class="five">护理等级评估</a>
+                    </li>
+                    <li class="box"></li>
+                </ul>
+                <div class="online">
+                    <p>在线咨询</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="inner clear">
+            <div class="filter">
+                <div class="filter_t clear">
+                    <p>首页<b>></b>找养老院</p>
+                    <a href="#" class="icon_map">地图搜索</a>
+                </div>
+                <div class="search_box">
+                    <dl class="cur_search">
+                        <dt class="current">当前选择</dt>
+                        <dd class="area"><b>上城区</b><span>X</span></dd>
+                        <dd class="price"><b>1000元以下</b><span>X</span></dd>
+                        <dd class="object"><b>自理</b><span>X</span></dd>
+                        <dd class="service"><b>1000元以下</b><span>X</span></dd>
+                        <dd class="clear">清空条件</dd>
+                    </dl>
+                    <dl class="l_search">
+                        <dt>所在区域</dt>
+                        <dd><i></i><b>不限</b></dd>
+                        <dd><i></i><b>上城区</b></dd>
+                        <dd><i></i><b>下城区</b></dd>
+                        <dd><i></i><b>西湖区</b></dd>
+                        <dd><i></i><b>拱墅区</b></dd>
+                        <dd><i></i><b>江干区</b></dd>
+                        <dd><i></i><b>滨江区</b></dd>
+                        <dd><i></i><b>余杭区</b></dd>
+                        <dd><i></i><b>萧山区</b></dd>
+                    </dl>
+                    <dl class="l_search">
+                        <dt>价格区间</dt>
+                        <dd><i></i><b>不限</b></dd>
+                        <dd><i></i><b>1000元以下/月</b></dd>
+                        <dd><i></i><b>1000-2000元/月</b></dd>
+                        <dd><i></i><b>2000-3000元/月</b></dd>
+                        <dd><i></i><b>3000-5000元/月</b></dd>
+                        <dd><i></i><b>5000元以上/月</b></dd>
+                    </dl>
+                    <dl class="l_search">
+                        <dt>收住对象</dt>
+                        <dd><i></i><b>不限</b></dd>
+                        <dd><i></i><b>自理</b></dd>
+                        <dd><i></i><b>半护</b></dd>
+                        <dd><i></i><b>全护</b></dd>
+                        <dd><i></i><b>特护</b></dd>
+                    </dl>
+                    <dl class="l_search" style="border-bottom:none;">
+                        <dt>特色服务</dt>
+                        <dd><i></i><b>不限</b></dd>
+                        <dd><i></i><b>接收异地老人</b></dd>
+                        <dd><i></i><b>医保定点</b></dd>
+                    </dl>
+                </div>
+                <div class="sort">
+                    <a href="javascript:;" class="on">综合排序</a>
+                    <a href="javascript:;" class="s_down">评价</a>
+                    <a href="javascript:;" class="s_down s_last">价格</a>
+                </div>
+            </div>
+            <div class="result">
+                <div class="res_l">
+                    <ul id="oBlock">
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="../listShow/list_1_show.html">查看详情</a>
+                            </div>
+<!--                            <strong class="icon_gray"></strong>
+-->                        </li>
+                      
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="../listShow/list_1_show.html">查看详情</a>
+                            </div>
+                        </li>
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="../listShow/list_1_show.html">查看详情</a>
+                            </div>
+<!--                            <strong class="icon_best"></strong>
+-->                        </li>
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="../listShow/list_1_show.html">查看详情</a>
+                            </div>
+                        </li>
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="#">查看详情</a>
+                            </div>
+<!--                            <strong class="icon_best"></strong>
+-->                        </li>
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="#">查看详情</a>
+                            </div>
+                        </li>
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="#">查看详情</a>
+                            </div>
+<!--                            <strong class="icon_best"></strong>
+-->                        </li>
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="#">查看详情</a>
+                            </div>
+                        </li>
+                        <li class="best">
+                            <img src="images/list_pic01.jpg" class="l_img">
+                            <div class="info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <p class="address">机构地址：<span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span></p>
+                                <p class="seat">床位总数：<span>9999张</span></p>
+                                <img src="images/icon_mini_map.png" class="mini_map">
+                            </div>
+                            <div class="look">
+                                <p><i></i><span>99998</span><b>起</b></p>
+                                <a href="#">查看详情</a>
+                            </div>
+                            <!--<strong class="icon_best"></strong>-->
+                        </li>
+                    </ul>
+                </div>
+                <div class="res_r">
+                    <a href="#" class="r_link"><img src="images/right_img.jpg" alt=""></a>
+                    <div class="tips">
+                        <h3 class="tips_title">
+                            <span>小贴士</span>
+                            <b>+</b>
+                        </h3>
+                        <ol>
+                            <li><a href="news_show.html" target="_blank">养老院老人喜尝无锡地产鲜花饼</a></li>
+                            <li><a href="news_show.html" target="_blank">养老院老人喜尝无锡地产鲜花饼</a></li>
+                            <li><a href="news_show.html" target="_blank">养老院老人喜尝无锡地产鲜花饼</a></li>
+                            <li><a href="javascript:;">健康养生小贴士健康养生小贴健康</a></li>
+                            <li><a href="javascript:;">健康养生小贴士健康养生小健康</a></li>
+                        </ol>
+                    </div>
+                    <a href="#" class="r_link2"><img src="images/right_img2.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inner">
+            <ul class="intro">
+                <li>
+                    <h2>中国最大的养老服务平台</h2>
+                    <p>覆盖全国 <b>550</b> 多个城市<br><b>200.000</b> 位老人<br><b>20,000</b> 家养老服务机构
+                    </p>
+                </li>
+                <li class="service">
+                    <h2>为什么要选择去哪养老</h2>
+                    <p class="f_icon"></p>
+                    <div class="txt">
+                        <p class="f_txt">放心的服务</p>
+                        <h6>领先的服务标准  独创的保障体系</h6>
+                    </div>
+                </li>
+                <li class="service f_price">
+                    <p class="f_icon"></p>
+                    <div class="txt">
+                        <p class="f_txt">放心的价格</p>
+                        <h6>具竞争力的价格  无任何隐形费用</h6>
+                    </div>
+                </li>
+                <li class="e_code">
+                    <img src="images/erwei.jpg" alt="">
+                    <strong>去哪养老官方微信</strong>
+                </li>
+            </ul>
+            <div class="links">
+                <ol>
+                    <li><a href="javascript:;" class="friend">友情链接：</a></li>
+                    <li><a href="#">健康养生网</a></li>
+                    <li><a href="#">养老中国网</a></li>
+                    <li><a href="#">安利纽崔莱</a></li>
+                    <li><a href="#">美国红枫</a></li>
+                    <li><a href="#">无锡老龄网</a></li>
+                    <li><a href="#">全国离退休人才网</a></li>
+                    <li><a href="#">山东老人网</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">聚道网</a></li>
+                    <li><a href="#">常人网</a></li>
+                    <li><a href="#">无锡市便民服务中心</a></li>
+                </ol>
+            </div>
+            <div class="copyright">
+                <span>Copyright©2015-2025 去哪养老网 www.5199yl.com 版权所有</span>
+                <img src="images/believe.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/list1.js"></script>
+<script src="js/over.js"></script>
+<script src="js/choose_city.js"></script>

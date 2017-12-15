@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>去哪养老网</title>
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="top">
+            <div class="inner clear">
+                <ul>
+                    <li>您好，欢迎来到去哪养老网！</li>
+                    <li><a href="../login/login.html" class="login">登录</a></li>
+                    <li><a href="../login/register.html">注册</a></li>
+                </ul>
+                <ol>
+                    <li><a href="../html/system/Order_information.html">我的订单</a></li>
+                    <li><a href="../html/system/User_message.html">个人中心</a></li>
+                    <li><a href="about_us.html">关于我们</a></li>
+                    <li><a href="javascript:;">机构入口</a></li>
+                    <li class="contact" style="position:relative;"><a href="javascript:;">关注我们</a><i></i></li>
+                    <!--关注我们，鼠标移上去出现二维码-->
+                  <div class="erweima" id="erweima">
+                     <div class="ewm_box">
+                        <p>扫描二维码</p>
+                        <p>关注去哪养老网</p>
+                        <p><img src="../images/2-code.png" style="width:56px;height:56px;"></p>
+                     </div>
+                  
+                  </div>  
+                   
+                </ol>
+                 
+            </div>
+        </div>
+        <div class="menu_top">
+            <div class="inner">
+                <div class="menu_l">
+                    <img src="images/logo.png" >
+                    <a href="javascript:;" class="show_city" id="show_city"><span class="city" id="city">杭州</span></a>                      
+                     <ul class="choose_city">
+              
+          						<!--点击或者鼠标以上杭州后，显示出来选择地区-->
+           						<ul class="allProvince" id="all_city" style="position:absolute;left:210px;">
+                          <div class="provice" style="width:390px;background:#fff; margin-left:20px;">
+                          
+                       		 <h4><a href="javascript:;">热门</a>  <a href="javascript:;">ABCDEF</a> <a href="javascript:;">GHIJKLM</a>  <a href="javascript:;">NOPQRS</a>  <a href="javascript:;">TWXYZ</a></h4>
+                                <div class="cityChoose_show cityChoose_show2 active clear">
+                                <li><b>A</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                                <li><b>B</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                                <li><b>C</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>D</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>E</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>F</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>
+
+
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                                <li><b>A</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                                <li><b>B</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                                <li><b>C</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>D</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>E</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>F</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>
+                                
+                                
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>G</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>H</b><div><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a></div></li>
+                       			    <li><b>I</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>J</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>K</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>L</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>                                
+                                
+   
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>M</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>N</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                       			    <li><b>O</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>P</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>Q</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>R</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>       
+   
+ 
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>S</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>T</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                       			    <li><b>U</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>V</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>W</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>X</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>     
+ 
+                                
+                                
+                            </div>
+                          </ul>
+
+
+					</ul>  
+                             
+                </div>
+                <div class="menu_m">
+                    <input type="text" value="" placeholder="请输入机构关键字" class="search">
+                    <a href="javascript:;" class="submit">搜索</a>              
+                </div>
+                <div class="menu_r">
+                    <img src="images/hotline.png" ></div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="inner">
+                <ul class="list" id="navUl">
+                    <li>
+                        <a href="index.html" class="">首页</a>
+                    </li>
+                    <li>
+                        <a href="list_2.html" class="two">养生度假</a>
+                    </li>
+                    <li>
+                        <a href="list_1.html" class="two">找养老院</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="three">机票</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="four">火车票</a>
+                    </li>
+                    <li>
+                        <a href="Nursing_Grad.html" class="five">护理等级评估</a>
+                    </li>
+                    <li class="box"></li>
+                </ul>
+                <div class="online">
+                    <p>在线咨询</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="order">
+        <div class="inner">
+            <ol class="paypal">
+                <li class="current"></li>
+                <li>订单填写</li>
+                <li class="after"></li>
+                <li>订单支付</li>
+                <li class="after"></li>
+                <li>订单完成</li>
+            </ol>
+            <div class="res">
+                <div class="r_left order_fill">
+                    <h4>填写订单信息</h4>
+                    <div class="fill">
+                        <div class="reserve clear">
+                            <p class="name">预订信息</p>
+                            <div class="contact">
+                                <p class="first">
+                                    <span><i>*</i>联系人姓名：</span>
+                                    <input type="text" class="inp">
+                                    <div class="flDiv">
+                                      <ul>
+                                         <li><a href="javascript::">周宏</a></li>
+                                         <li><a href="javascript::">ruby</a></li>
+                                      </ul>
+                                    </div>
+                                </p>
+                                <p class="phone">
+                                    <span><i>*</i>手机号码：</span>
+                                    <input type="text" class="inp">
+                                      <div class="flDiv2">
+                                      <ul>
+                                         <li><a href="javascript::">周宏</a></li>
+                                         <li><a href="javascript::">ruby</a></li>
+                                      </ul>
+                                    </div>   
+                                </p>
+                            </div>
+                            <div class="second">
+                                <span>其他联系人：</span>
+                                <select>
+                                    <option value="">111</option>
+                                    <option value="">222</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="reserve checkin clear">
+                            <p class="name">入住信息</p>
+                            <div class="contact">
+                                <div class="date">
+                                    <p class="first">
+                                        <span><i>*</i>入离日期：</span>
+                                    </p>
+                                    <ul class="check">
+                                       <li class="check_in" onclick="laydate({elem: '#hello1'});">
+                                            <span>入住</span>
+                                            <strong id="hello1"></strong>
+                                            <b onclick="laydate({elem: '#hello1'});"></b>
+                                        </li> 
+                                        <li class="check_in check_out" onclick="laydate({elem: '#hello2'});">
+                                            <span>退房</span>
+                                            <strong id="hello2"></strong>
+                                            <b onclick="laydate({elem: '#hello2'});"></b>
+                                        </li> 
+                                    </ul>
+                                </div>
+                                <div class="second number">
+                                    <span><i>*</i>床位数量：</span>
+                                    <select>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                                <div class="second number">
+                                    <div style="margin-bottom:10px;clear:both;">
+                                        <span class="username"><i>*</i>姓名：</span>
+                                        <input type="text" class="inp inp_name">
+                                        
+                                    <div class="shortDiv sDiv">
+                                      <ul>
+                                         <li><a href="javascript::">周宏</a></li>
+                                         <li><a href="javascript::">ruby</a></li>
+                                      </ul>
+                                    </div> 
+                                        
+                                    </div>
+                                    <div>
+                                        <span><i>*</i>证件类型：</span>
+                                        <select>
+                                            <option value="">身份证</option>
+                                            <option value="">护照</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <span class="usernum"><i>*</i>证件号码：</span>
+                                        <input type="text" class="inp_num">
+                                        
+                                     <div class="zjNum num1 active">
+                                      <ul>
+                                         <li><a href="javascript::">33072123278954732523</a></li>
+                                         <li><a href="javascript::">33072123278954732523</a></li>
+                                      </ul>
+                                    </div>                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                                <div class="second number">
+                                    <div style="margin-bottom:10px;clear:both;">
+                                        <span class="username"><i>*</i>姓名：</span>
+                                        <input type="text" class="inp_name">
+                                        
+                                    <div class="shortDiv sDiv2">
+                                      <ul>
+                                         <li><a href="javascript::">周宏</a></li>
+                                         <li><a href="javascript::">ruby</a></li>
+                                      </ul>
+                                    </div> 
+                                        
+                                        
+                                        
+                                    </div>
+                                    <div>
+                                        <span><i>*</i>证件类型：</span>
+                                        <select>
+                                            <option value="">身份证</option>
+                                            <option value="">护照</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <span class="usernum"><i>*</i>证件号码：</span>
+                                        <input type="text" class="inp_num">
+                                        
+                                     <div class="zjNum num2">
+                                      <ul>
+                                         <li><a href="javascript::">33072123278954732523</a></li>
+                                         <li><a href="javascript::">33072123278954732523</a></li>
+                                      </ul>
+                                    </div>                                        
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reserve bill clear">
+                            <p class="name">发票信息</p>
+                            <div class="contact">
+                                <p class="first">
+                                    <span>发票：</span>
+                                    <input type="radio" class="radio" name="发票" style="margin-left:0;">
+                                    <b>需要发票</b>
+                                    <input type="radio" class="radio" name="发票">
+                                    <b>不需要发票</b>
+                                </p>
+                                <p class="phone">
+                                    <span>发票抬头：</span>
+                                    <input type="text" class="inp b_title">
+                                    
+                                      <div class="fp_num">
+                                      <ul>
+                                         <li><a href="javascript::">33072123278954732523</a></li>
+                                         <li><a href="javascript::">33072123278954732523</a></li>
+                                      </ul>
+                                    </div>                                        
+                                   
+                                    
+                                </p>
+                                <div class="second number">
+                                    <span>发票明细：</span>
+                                    <select>
+                                        <option value=""></option>
+                                        <option value="">3</option>
+                                    </select>
+                                </div>
+                                <p class="phone">
+                                    <span>收件人：</span>
+                                    <input type="text" class="inp">
+                                    
+                                       <div class="addressee_man">
+                                      <ul>
+                                         <li><a href="javascript::">王武</a></li>
+                                         <li><a href="javascript::">张三</a></li>
+                                         <li><a href="javascript::">李四</a></li>
+                                      </ul>
+                                    </div>                                      
+                                    
+                                </p>
+                                <p class="phone">
+                                    <span>地址：</span>
+                                    <input type="text" class="inp long">
+                                    
+                                       <div class="in_address">
+                                      <ul>
+                                         <li><a href="javascript::">浙江省杭州市滨江区隆和国际</a></li>
+                                         <li><a href="javascript::">浙江省杭州市滨江区隆和国际</a></li>
+                                         <li><a href="javascript::">浙江省杭州市滨江区隆和国际</a></li>
+                                      </ul>
+                                    </div>                                      
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="reserve cash clear">
+                            <p class="name">现金账户</p>
+                            <div class="contact">
+                                <input type="checkbox">
+                                <b>使用现金账户</b>
+                                <em>￥</em>
+                                <span>7777</span>
+                            </div>
+                        </div>
+                        <div class="reserve cash debit clear">
+                            <p class="name">积分</p>
+                            <div class="contact">
+                                <input type="checkbox">
+                                <b>使用积分：</b>
+                                <input type="text" class="inp_edit"> 点
+                                <strong>-￥0.00</strong>
+                                <p class="use">（可用522点）</p>
+                            </div>
+                        </div>
+                        <div class="reserve quan clear">
+                            <p class="name">优惠券</p>
+                            <div class="contact second">
+                                <select>
+                                    <option value="50元优惠券芭芭拉">50元优惠券芭芭拉</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="cancel clear">
+                            <p><b>取消修改说明：</b>订单提交后我们会立即操作扣款，如订单不确认将全额退款至您的付款账户。<br>如需修改取消订单，<b>请在入住前一天的18:00以前通知我们</b>。若未入住或过此时间取消修改，我们将收取您第一天的房费。</p>
+                        </div>
+                        <div class="send_order clear">
+                            <input type="submit" class="sub_btn" value="提交订单">
+                            <a href="javascript:;">重新选择 ></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="r_right">
+                    <div class="side">
+                        <img src="images/side_img01.png" alt="">
+                        <h2>杭州上城区唯康老人养生养老养生文化公寓</h2>
+                        <p class="address">浙江省杭州市上城区近江南路2号（富春江路近
+江小区中心公园旁）</p>
+                        <img src="images/icon_mini_map.png" style="margin:10px 0 10px 18px;">
+                        <div class="level">
+                            <p>护理级别：<span>半护</span></p>
+                            <p>床位类型：<span>双人间朝南</span></p>
+                            <p>饮食选择：<span>不包餐</span></p>
+                        </div>
+                        <div class="emphasize">
+                            <div class="info">2张床位，入住1个月</div>
+                            <p class="total_price">实付金额：<em>￥</em><span>7456</span></p>
+                            <div class="integral">可获得积分 <span>7456分</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inner">
+            <ul class="intro">
+                <li>
+                    <h2>中国最大的养老服务平台</h2>
+                    <p>覆盖全国 <b>550</b> 多个城市<br><b>200.000</b> 位老人<br><b>20,000</b> 家养老服务机构
+                    </p>
+                </li>
+                <li class="service">
+                    <h2>为什么要选择去哪养老</h2>
+                    <p class="f_icon"></p>
+                    <div class="txt">
+                        <p class="f_txt">放心的服务</p>
+                        <h6>领先的服务标准  独创的保障体系</h6>
+                    </div>
+                </li>
+                <li class="service f_price">
+                    <p class="f_icon"></p>
+                    <div class="txt">
+                        <p class="f_txt">放心的价格</p>
+                        <h6>具竞争力的价格  无任何隐形费用</h6>
+                    </div>
+                </li>
+                <li class="e_code">
+                    <img src="images/erwei.jpg" alt="">
+                    <strong>去哪养老官方微信</strong>
+                </li>
+            </ul>
+            <div class="links">
+                <ol>
+                    <li><a href="javascript:;" class="friend">友情链接：</a></li>
+                    <li><a href="#">健康养生网</a></li>
+                    <li><a href="#">养老中国网</a></li>
+                    <li><a href="#">安利纽崔莱</a></li>
+                    <li><a href="#">美国红枫</a></li>
+                    <li><a href="#">无锡老龄网</a></li>
+                    <li><a href="#">全国离退休人才网</a></li>
+                    <li><a href="#">山东老人网</a></li>
+                    <li><a href="#">新闻资讯</a></li>
+                    <li><a href="#">聚道网</a></li>
+                    <li><a href="#">常人网</a></li>
+                    <li><a href="#">无锡市便民服务中心</a></li>
+                </ol>
+            </div>
+            <div class="copyright">
+                <span>Copyright©2015-2025 去哪养老网 www.5199yl.com 版权所有</span>
+                <img src="images/believe.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/news_show.js"></script>
+<script src="js/laydate.js"></script>
+<script src="js/choose_city.js"></script>
+<script>
+!function(){
+    laydate.skin('dahong');//切换皮肤，请查看skins下面皮肤库
+}();
+</script>

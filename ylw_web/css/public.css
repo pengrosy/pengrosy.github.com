@@ -1,0 +1,28 @@
+/* 重置 */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, input, textarea, button {margin: 0;padding: 0;}
+li {list-style: none;}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, a, textarea, input, button, span, em, strong, img, div {
+	-webkit-touch-callout: none;
+	-moz-touch-callout: none;
+	-ms-touch-callout: none;
+	touch-callout: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-ms-tap-highlight-color: rgba(0, 0, 0, 0);
+	tap-highlight-color: rgba(0, 0, 0, 0);
+}
+b,i,strong{font-weight: normal;font-style:normal;}
+/*input,*/ textarea, button ,select{outline: none;appearance: none;-webkit-appearance: none;}
+textarea {resize: none;}
+img,a img {border: none;vertical-align: middle;}
+a {text-decoration: none;}
+*:focus{outline:none;}
+/* Hides from IE-mac \*/
+html {
+	font-size: 62.5%;
+	font-family: "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}

@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>去哪养老网</title>
+<link rel="stylesheet" href="../index/css/public.css">
+<link rel="stylesheet" href="../index/css/common.css">
+<link rel="stylesheet" href="../index/css/style.css">
+<link rel="stylesheet" href="css/list.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="top">
+            <div class="inner clear">
+                <ul>
+                    <li>您好，欢迎来到去哪养老网！</li>
+                    <li><a href="../login/login.html" class="login">登录</a></li>
+                    <li><a href="../login/register.html">注册</a></li>
+                </ul>
+                <ol>
+                    <li><a href="../html/system/Order_information.html">我的订单</a></li>
+                    <li><a href="../html/system/User_message.html">个人中心</a></li>
+                    <li><a href="../index/about_us.html">关于我们</a></li>
+                    <li><a href="javascript:;">机构入口</a></li>
+                    <li class="contact" style="position:relative;"><a href="">关注我们</a><i></i></li>
+                    <!--关注我们，鼠标移上去出现二维码-->
+                  <div class="erweima" id="erweima">
+                     <div class="ewm_box">
+                        <p>扫描二维码</p>
+                        <p>关注去哪养老网</p>
+                        <p><img src="../images/2-code.png" style="width:56px;height:56px;"></p>
+                     </div>
+                  
+                  </div>  
+                   
+                </ol>
+                 
+            </div>
+        </div>
+        <div class="menu_top">
+            <div class="inner">
+                <div class="menu_l">
+                    <img src="../index/images/logo.png" >
+                    <a href="javascript:;" class="show_city" id="show_city"><span class="city" id="city">杭州</span></a>                      
+                     <ul class="choose_city" id="allProvince">
+              
+          						<!--点击或者鼠标以上杭州后，显示出来选择地区-->
+           						<ul class="allProvince" id="all_city" style="position:absolute;left:210px;">
+                          <div class="provice" id="allPlace" style="width:390px;background:#fff; margin-left:20px;">
+                          
+                       		 <h4><a href="javascript:;">热门</a>  <a href="javascript:;">ABCDEF</a> <a href="javascript:;">GHIJKLM</a>  <a href="javascript:;">NOPQRS</a>  <a href="javascript:;">TWXYZ</a></h4>
+                                <div class="cityChoose_show cityChoose_show2 active clear">
+                                <li><b>A</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                                <li><b>B</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                                <li><b>C</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>D</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>E</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>F</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>
+
+
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                                <li><b>A</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                                <li><b>B</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                                <li><b>C</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>D</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>E</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                                <li><b>F</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>
+                                
+                                
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>G</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>H</b><div><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a> </b><a href="javascript:void(0);">杭州</a></div></li>
+                       			    <li><b>I</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>J</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>K</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>L</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>                                
+                                
+   
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>M</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>N</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                       			    <li><b>O</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>P</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>Q</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>R</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>       
+   
+ 
+                                <div class="cityChoose_show cityChoose_show2 clear">
+                       			    <li><b>S</b><div><a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a>  <a href="javascript:void(0);">安徽</a> <a href="javascript:void(0);">安徽</a></div></li>
+                       			    <li><b>T</b><div><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a> </b><a href="javascript:void(0);">北京</a></div></li>
+                       			    <li><b>U</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                       			    <li><b>V</b><div><a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a> <a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>W</b><div><a href="javascript:void(0);">重庆</a></div></li>
+                        		    <li><b>X</b><div><a href="javascript:void(0);">福建</a></div></li>
+                                </div>     
+ 
+                                
+                                
+                            </div>
+                          </ul>
+
+
+					</ul>  
+                             
+                </div>
+                <div class="menu_m">
+                    <input type="text" value="" placeholder="请输入机构关键字" class="search">
+                    <a href="javascript:;" class="submit">搜索</a> 
+                </div>
+                <div class="menu_r">
+                    <img src="../index/images/hotline.png" ></div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="inner">
+                <ul class="list" id="navUl">
+                    <li>
+                        <a href="../index/index.html" class="">首页</a>
+                    </li>
+                    <li>
+                        <a href="../index/list_2.html" class="two">养生度假</a>
+                    </li>
+                    <li>
+                        <a href="../index/list_1.html" class="two">找养老院</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="three">机票</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="four">火车票</a>
+                    </li>
+                    <li>
+                        <a href="../index/Nursing_Grad.html" class="five">护理等级评估</a>
+                    </li>
+                    <li class="box"></li>
+                </ul>
+                <div class="online">
+                    <p>在线咨询</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main l_show">
+        <div class="bg_gray">
+            <div class="inner">
+                <div class="filter">
+                    <div class="filter_t">
+                        <p>
+                            首页 <b>></b>
+                            养生度假 <b>></b>
+                            三亚
+                            <b>></b>
+                            杭州上城区唯康老人养生文化公寓
+                        </p>
+                        <a href="#" class="icon_support">团队预定请联系客服</a>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="res_l">
+                        <div class="l_box">
+                            <div class="box_top info">
+                                <h2>杭州上城区唯康老人养生文化公寓</h2>
+                                <span class="adr">浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span>
+                                <img src="images/icon_maps.png" >
+                                <a href="../index/order_1.html" class="gobuy">立即预订</a>
+                            </div>
+                            <div class="box_mid">
+                                <img src="images/list_show01.jpg" id="box_img">
+                                <div class="price">
+                                    <p> <i>￥</i>
+                                        <span>9998</span>
+                                        <b>起</b>
+                                    </p>
+                                </div>
+                                
+ 								<div class="Pic_Collection">
+                                    <p><a href="javascript:;"><span>收藏</span></a></p>
+                                </div>                                              
+                                
+                            </div>
+                            <div class="box_bot">
+                                <ul>
+                                    <li class="one">
+                                        <img src="images/nav01.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav02.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav03.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav04.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav01.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav02.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav03.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav04.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav01.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav02.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav03.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav04.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav01.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav02.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav03.jpg" />
+                                    </li>
+                                    <li>
+                                        <img src="images/nav04.jpg" />
+                                    </li>
+                                </ul>
+                                <a href="javascript:;" class="prev"></a>
+                                <a href="javascript:;" class="next"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="res_r">
+                        <div class="comment" id="user_comment">
+                            <div class="dot"> <strong class="percent"><b>94%</b></strong> 
+                                <span class="total">
+                                    共 <em>34789</em>
+                                    点评
+                                </span>
+                            </div>
+                            <div class="vip">
+                                <a href="javascript:;" class="prev"></a>
+                                <a href="javascript:;" class="next n_act"></a>
+                                <div class="kids z-show">
+                                    <div class="user">
+                                        <p class="show_say">
+                                            会员
+                                            <span>7280</span>
+                                            在
+                                            <span>2015-12-02</span>
+                                            说
+                                        </p>
+                                    </div>
+                                    <div class="discuss">
+                                        <p class="show">价廉物美 真的挺好。卫生、舒适。</p>
+                                    </div>
+                                </div>
+                                <div class="kids">
+                                    <div class="user">
+                                        <p class="show_say">
+                                            会员
+                                            <span>1107</span>
+                                            在
+                                            <span>2016-02-09</span>
+                                            说
+                                        </p>
+                                    </div>
+                                    <div class="discuss">
+                                        <p class="show">安和桥北，让我再听一遍最美的那一句。</p>
+                                    </div>
+                                </div>
+                                <div class="kids">
+                                    <div class="user">
+                                        <p class="show_say">
+                                            会员
+                                            <span>0820</span>
+                                            在
+                                            <span>2016-02-15</span>
+                                            说
+                                        </p>
+                                    </div>
+                                    <div class="discuss">
+                                        <p class="show">爱上一匹野马。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side_map">
+                            <h6>机构地图</h6>
+                            <img src="images/side_map.jpg" ></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="production">
+            <div class="inner">
+                <div class="product">
+                    <div class="pro_l">
+                        <div class="detail" id="select_show">
+                            <ol>
+                                <li ><a href="javascript:;" class="on">房型列表</a></li>
+                                <li><a href="javascript:;">收费标准</a></li>
+                                <li><a href="javascript:;">基本信息</a></li>
+                                <li><a href="javascript:;">设施服务</a></li>
+                                <li><a href="javascript:;">周边景点</a></li>
+                                <li><a href="javascript:;">周边小吃</a></li>
+                                <li><a href="javascript:;">预订须知</a></li>
+                                <li><a href="javascript:;" style="border-right:1px solid #d9d9d9;">用户点评</a></li>
+                            </ol>
+                        </div>
+                        <div class="panel">
+                            <div class="p_con" id="pc1">
+                                <a href="#" name="p1"></a>
+                                <ul class="check">
+                                    <li class="check_in" onclick="laydate({elem: '#in'});">
+                                        <span>入住</span> <strong id="in">2016-02-16</strong>
+                                        <b onclick="laydate({elem: '#in'});"></b>
+                                    </li>
+                                    <li class="check_in check_out" onclick="laydate({elem: '#out'});">
+                                        <span>退房</span>
+                                        <strong id="out">2016-02-20</strong>
+                                        <b onclick="laydate({elem: '#out'});"></b>
+                                    </li>
+                                    <li class="update">修改日期</li>
+                                </ul>
+
+                                  <div class="bImg" style="top:44px;"><img src=""></div>
+
+								<div class="item">
+                                    <div class="all">
+                                        <img src="images/pro_sm_pic01.jpg" >
+                                        <div class="del" >
+                                            <p class="d_name">大床房</p>
+                                            <p class="infom">
+                                                房间26㎡ | 大床 | 可住：
+                                                <b></b>
+                                                <b></b>
+                                                | 免费WIFI | 包餐
+                                            </p>
+                                        </div>
+                                        <div class="look">
+                                            <p> <i></i>
+                                                <span>190</span>
+                                                <b>起</b>
+                                            </p>
+                                            <a href="../index/order_1.html">立即预订</a>
+                                        </div>
+                                    </div>
+                                    <div class="season">
+                                        <ul>
+                                            <li>&nbsp;</li>
+                                            <li>1-6天</li>
+                                            <li>7-14天</li>
+                                            <li>15-29天</li>
+                                            <li>30天及以上</li>
+                                        </ul>
+                                        <ol>
+                                            <li class="s_name">旺季</li>
+                                            <li>¥200</li>
+                                            <li>¥180</li>
+                                            <li>¥160</li>
+                                            <li>¥140</li>
+                                        </ol>
+                                        <ol>
+                                            <li class="s_name">淡季</li>
+                                            <li>¥300</li>
+                                            <li>¥280</li>
+                                            <li>¥260</li>
+                                            <li>¥240</li>
+                                        </ol>
+                                    </div>
+                                    <ul class="thumb">
+                                        <li>
+                                            <img src="images/thumb_img01.jpg" >
+                                        </li>
+                                        <li>
+                                            <img src="images/thumb_img02.jpg" >
+                                        </li>
+                                        <li>
+                                            <img src="images/thumb_img01.jpg" >
+                                        </li>
+                                        <li>
+                                            <img src="images/thumb_img02.jpg" >
+                                        </li>
+                                        <li>
+                                            <img src="images/thumb_img01.jpg" >
+                                        </li>
+                                        <li>
+                                            <img src="images/thumb_img02.jpg" >
+                                        </li>
+                                    </ul>
+                                </div>
+                                  <div class="bImg" style="top:406px;"><img src=""></div>                              
+                                <div class="item">
+                               	    <div class="all other">
+                                    <img src="images/pro_sm_pic02.jpg" >
+                                    <div class="del">
+                                        <p class="d_name">套房</p>
+                                        <p class="infom">
+                                            房间55㎡ | 双床 | 可住：
+                                            <b></b>
+                                            <b></b>
+                                            | 免费WIFI
+                                        </p>
+                                    </div>
+                                    <div class="look">
+                                        <p>
+                                            <i></i>
+                                            <span>290</span>
+                                            <b>起</b>
+                                        </p>
+                                        <a href="../index/order_1.html">立即预订</a>
+                                    </div>
+                                </div>
+                                	<div class="season">
+                                        <ul>
+                                            <li>&nbsp;</li>
+                                            <li>1-6天</li>
+                                            <li>7-14天</li>
+                                            <li>15-29天</li>
+                                            <li>30天及以上</li>
+                                        </ul>
+                                        <ol>
+                                            <li class="s_name">旺季</li>
+                                            <li>¥200</li>
+                                            <li>¥180</li>
+                                            <li>¥160</li>
+                                            <li>¥140</li>
+                                        </ol>
+                                        <ol>
+                                            <li class="s_name">淡季</li>
+                                            <li>¥300</li>
+                                            <li>¥280</li>
+                                            <li>¥260</li>
+                                            <li>¥240</li>
+                                        </ol>
+                                    </div>
+                                    <ul class="thumb">
+                                        <li>
+                                            <img src="images/thumb_img01.jpg" ></li>
+                                        <li>
+                                            <img src="images/thumb_img02.jpg" ></li>
+                                        <li>
+                                            <img src="images/thumb_img01.jpg" ></li>
+                                        <li>
+                                            <img src="images/thumb_img02.jpg" ></li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                            <div class="p_con">
+                                <a href="#" name="p2"></a>
+                                <h5 class="charge">收费标准</h5>
+                                <div class="c_txt">
+                                    <p>·  旺季时间   每年11月-03月  ·  淡季时间   每年04月-10月  ·</p>
+                                    <p>
+                                        ·  淡旺季交替计算公式：如定16天，其中3天是旺季，13天是淡季，则总价=3*（15-29天旺季价）+ 13*（15-29天淡季价）  ·
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="p_con">
+                                <a href="#" name="p3"></a>
+                                <h5 class="charge">基本信息</h5>
+                                <ol class="base_info">
+                                    <li>
+                                        <img src="images/base_img.jpg" alt=""></li>
+                                    <li>
+                                        <p class="base_left">
+                                            <i class="icon_b icon_tel"></i>
+                                            <span class="tel">机构电话</span>
+                                        </p>
+                                        <p class="base_right">
+                                            <span class="tel_show" id="tel_show">点击后显示</span>
+                                            <span>
+                                                去哪养老网预定：
+                                                <b>400-640-5199</b>
+                                            </span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="base_left">
+                                            <i class="icon_b icon_m"></i>
+                                            <span class="tel">机构地址</span>
+                                        </p>
+                                        <p class="base_right">
+                                            <span>浙江省杭州市上城区近江南路2号（富春江路近江小区中心公园旁）</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="base_left">
+                                            <i class="icon_b icon_hos"></i>
+                                            <span class="tel">医护服务</span>
+                                        </p>
+                                        <p class="base_right">
+                                            <span>我们有什么什么医护服务</span>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p class="base_left">
+                                            <i class="icon_b icon_intro"></i>
+                                            <span class="tel">机构简介</span>
+                                        </p>
+                                        <p class="base_right">
+                                            <span class="more" id="more_intro">
+                                                祥阳老年公寓是无锡市南长区民政局下属的福利企业，建寓宗旨为“惜老扶弱”树尊老敬老美德。创老龄...祥阳老年公寓是无锡市南长区民政局下属的福利企业，建寓宗旨为“惜老扶弱”树尊老敬老美德。创老龄...
+                                            </span>
+                                        </p>
+                                        <span class="icon_open" id="icon_open"></span>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="p_con">
+                                <a href="#" name="p4"></a>
+                                <h5 class="charge">设施服务</h5>
+                                <div class="c_txt ser_txt">
+                                    <p>
+                                        环境生态宜居，无障碍设计，配备安全监控、保安巡查等，保障长者安全。约2万平方米苏州园林风格的花园，与应有尽有的生活配套设施，是江南文化与现代生活的完美结合，满足长者尊贵生活的需要。
+                                    </p>
+                                    <p>
+                                        家园为长者提供学习空间及各种设施，长者结交兴趣爱好相同的朋友，自愿组成各种学习、活动小组，如：书画、音乐、棋牌、球类、手工制作、电脑、养生等。
+                                    </p>
+                                </div>
+                                <div class="facility" id="facility">
+                                    <img src="images/facility_img01.jpg" >
+                                    <ol>
+                                        <li class="on"></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ol>
+                                    <p class="btn prev"></p>
+                                    <p class="btn next"></p>
+                                </div>
+                            </div>
+                            <div class="p_con">
+                                <a href="#" name="p5"></a>
+                                <h5 class="charge">周边景点</h5>
+                                <div class="scene" id="scene">
+                                    <p class="btn prev"></p>
+                                    <p class="btn next"></p>
+                                    <ul>
+                                        <li>
+                                            <img src="images/scene_img01.jpg" >
+                                            <p class="name">西湖</p>
+                                            
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <img src="images/scene_img02.jpg" >
+                                            <p class="name">雷峰塔</p>
+                                            
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <img src="images/scene_img01.jpg" >
+                                            <p class="name">西湖</p>
+                                            
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <img src="images/scene_img01.jpg" >
+                                            <p class="name">西湖</p>
+                                            
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                            
+                                        </li>
+                                        <li>
+                                            <img src="images/scene_img02.jpg" >
+                                            <p class="name">雷峰塔</p>
+                                            
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                            
+                                        </li>
+                                        <li style="margin-right:0;">
+                                            <img src="images/scene_img01.jpg" >
+                                            <p class="name">西湖</p>
+                                            
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p_con">
+                                <a href="#" name="p6"></a>
+                                <h5 class="charge">周边小吃</h5>
+                                <div class="scene" id="scene2">
+                                    <p class="btn prev"></p>
+                                    <p class="btn next"></p>
+                                    <ul>
+                                        <li>
+                                            <img src="images/snack_img01.jpg" >
+                                            <p class="name">春饼</p>
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="images/snack_img02.jpg" >
+                                            <p class="name">油炸冰淇淋</p>
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="images/snack_img01.jpg" >
+                                            <p class="name">芝士糯米团</p>
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="images/snack_img03.jpg" >
+                                            <p class="name">芝士糯米团</p>
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="images/snack_img02.jpg" >
+                                            <p class="name">油炸冰淇淋</p>
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li style="margin-right:0;">
+                                            <img src="images/snack_img01.jpg" >
+                                            <p class="name">春饼</p>
+                                            <div class="mask">
+                                                <p>
+                                                    西湖三面环山，面积约6.39平方千米，东西宽约2.8千米，南北长约3.2千米，绕湖一周近15千米。湖中被孤山、白堤、苏堤、杨公堤分隔，按面积大小分别为外西湖、西里湖、北里湖、小南湖及岳湖等五片水面，
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p_con">
+                                <a href="#" name="p7"></a>
+                                <h5 class="charge">预订须知</h5>
+                                <div class="need">
+                                    <p>
+                                        当您预订酒店时您应以实际入住人的名字做预订。入住时您应以预订酒店时登记的客人名字来办理入住手续，也就是说办理入住手续的客人姓名要与预订
+时登记的姓名一致。所有入住酒店的客人都需要提供身份证，等有效证件登记入住,入住酒店注意事项：
+                                    </p>
+                                    <ol class="rule">
+                                        <li>1、酒店房租以日计算，中午十二时至次日中午十二时为一天；如需提前入住或逾时退房，请与酒店前台联系；</li>
+                                        <li>
+                                            2、客人在酒店前台办理登记入住手续时，需交纳一定数额的定金，定金除房费外，还需交纳100——1000元的押金，视各酒店的不同规定；
+                                        </li>
+                                        <li>3、客人之现金、有价证券或贵重物品，请存放于前台收银处或客房的保险箱中；</li>
+                                        <li>
+                                            4、房内冰箱物品需付费，但是茶包及咖啡包是免费的，有些电视的特定台要付费的请注意；洗浴用品并不是全都免费的，使用前请注意提示；
+                                        </li>
+                                        <li>5、电话费、洗衣、房间送餐、按摩等服务消费自理。</li>
+                                        <li>6、请爱护房内物品，如有损坏或遗失，酒店有权要求赔偿。</li>
+                                        <li>7、严禁携带武器、易爆、易燃、剧毒以及有放射性、有刺激性、有异味的物品进入酒店内；另外，宠物也是严禁带入酒店内的。</li>
+                                        <li>8、每间酒店都有不同的规定，以上仅作参考，具体规定请您在入住酒店前向酒店前台咨询。</li>
+                                    </ol>
+                                </div>
+                            </div>
+							<div class="p_con">
+                                <a href="#" name="p8"></a>
+                                <h5 class="charge">点评</h5>
+                                <div id="reviews" class="reviews">
+                                    <div class="comment">
+                                        <div class="dot"> <strong class="percent"><b>94%</b></strong> 
+                                            <span class="total">
+                                                共 <em>99条</em>
+                                                点评
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="attitude">
+                                        <p>
+                                            <span class="your">好评<i>（98%）</i></span>
+                                            <a href="javascript:;" class="sum">
+                                                <span style="width:271px;"></span>
+                                            </a>
+                                        </p>
+                                        <p>
+                                            <span class="your">中评<i>（2%）</i></span>
+                                            <a href="javascript:;" class="sum">
+                                                <span style="width:6px;"></span>
+                                            </a>
+                                        </p>
+                                        <p>
+                                            <span class="your">差评<i>（1%）</i></span>
+                                            <a href="javascript:;" class="sum">
+                                                <span></span>
+                                            </a>
+                                        </p>
+                                    </div>
+                                    <div class="isay"><a href="../index/list_review.html" class="dianping">我来点评</a></div>
+                                </div>
+                                <div class="detail count" id="count">
+                                    <ol>
+                                        <li class="on"><b>全部点评</b><em>(3)</em></li>
+                                        <li>好评<em>（98）</em></li>
+                                        <li>中评<em>（2）</em></li>
+                                        <li style="border-right:1px solid #d9d9d9;">差评<em>（1）</em></li>
+                                    </ol>
+                                    <p class="line"></p>
+                                </div>
+                                <div class="user_say" id="say">
+                                    <div class="person common">
+                                        <div class="head">
+                                            <img src="images/head_pic01.jpg">
+                                            <p class="u_name">辗转梦牵魂</p>
+                                        </div>
+                                        <div class="user_body">
+                                            <p class="u_title">出行方便，对面小吃店很多。房间升级豪标很宽敞.设施高档，服务细致</p>
+                                            <p class="u_time">2015-07-19 23:25:22</p>
+                                            <ul class="upload">
+                                                <li><img src="images/upload01.jpg"></li>
+                                                <li><img src="images/upload02.jpg"></li>
+                                                <li><img src="images/upload03.jpg"></li>
+                                                <li><img src="images/upload04.jpg"></li>
+                                                <li><img src="images/upload01.jpg"></li>
+                                                <li><img src="images/upload02.jpg"></li>
+                                                <li><img src="images/upload03.jpg"></li>
+                                                <li><img src="images/upload04.jpg"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="person bad">
+                                        <div class="head">
+                                            <img src="images/head_pic01.jpg">
+                                            <p class="u_name">阿西吧</p>
+                                        </div>
+                                        <div class="user_body">
+                                            <p class="u_title">没有想象中的那么好呀，哎，果断差评</p>
+                                            <p class="u_time">2015-07-19 23:25:22</p>
+                                            <ul class="upload">
+                                                <li><img src="images/upload03.jpg"></li>
+                                                <li><img src="images/upload02.jpg"></li>
+                                                <li><img src="images/upload01.jpg"></li>
+                                                <li><img src="images/upload04.jpg"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="person good">
+                                        <div class="head">
+                                            <img src="images/head_pic01.jpg">
+                                            <p class="u_name">安河桥北</p>
+                                        </div>
+                                        <div class="user_body">
+                                            <p class="u_title">真是一次满意的体验啊，出行方便，对面小吃店很多。房间升级豪标很宽敞.设施高档，服务细致.周到</p>
+                                            <p class="u_time">2015-07-19 23:25:22</p>
+                                            <ul class="upload">
+                                                <li><img src="images/upload02.jpg"></li>
+                                                <li><img src="images/upload03.jpg"></li>
+                                                <li><img src="images/upload04.jpg"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                     <div class="more_comment">查看更多点评</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+					<div class="pro_r">
+						<h4>交通信息</h4>
+                        <ol>
+                            <li>
+                                <h5>市区（屯溪区）</h5>
+                                <p>
+                                    <span>驾车约2.095公里（约5分钟）</span>
+                                    <a href="#" class="good">查看路线</a>
+                                </p>
+                            </li>
+                            <li>
+                                <h5>屯溪老大桥</h5>
+                                <p>
+                                    <span>驾车约3.165公里（约7分钟）</span>
+                                    <a href="#">查看路线</a>
+                                </p>
+                            </li>
+                        </ol>
+                        <div class="share_box share_to">
+                            <span>分享到</span>
+                            <a href="javascript:;" class="share i_weibo"></a>
+                            <a href="javascript:;" class="share i_ren"></a>
+                            <a href="javascript:;" class="share i_qzone"></a>
+                            <a href="javascript:;" class="share i_t"></a>
+                            <a href="javascript:;" class="share i_m"></a>
+                            <a href="javascript:;" class="share i_weixin"></a>
+                        </div>
+					</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="inner">
+            <ul class="intro">
+                <li>
+                    <h2>中国最大的养老服务平台</h2>
+                    <p>
+                        覆盖全国
+                        <b>550</b>
+                        多个城市
+                        <br>
+                        <b>200.000</b>
+                        位老人
+                        <br>
+                        <b>20,000</b>
+                        家养老服务机构
+                    </p>
+                </li>
+                <li class="service">
+                    <h2>为什么要选择去哪养老</h2>
+                    <p class="f_icon"></p>
+                    <div class="txt">
+                        <p class="f_txt">放心的服务</p>
+                        <h6>领先的服务标准  独创的保障体系</h6>
+                    </div>
+                </li>
+                <li class="service f_price">
+                    <p class="f_icon"></p>
+                    <div class="txt">
+                        <p class="f_txt">放心的价格</p>
+                        <h6>具竞争力的价格  无任何隐形费用</h6>
+                    </div>
+                </li>
+                <li class="e_code">
+                    <img src="images/erwei.jpg" alt="">
+                    <strong>去哪养老官方微信</strong>
+                </li>
+            </ul>
+            <div class="links">
+                <ol>
+                    <li>
+                        <a href="javascript:;" class="friend">友情链接：</a>
+                    </li>
+                    <li>
+                        <a href="#">健康养生网</a>
+                    </li>
+                    <li>
+                        <a href="#">养老中国网</a>
+                    </li>
+                    <li>
+                        <a href="#">安利纽崔莱</a>
+                    </li>
+                    <li>
+                        <a href="#">美国红枫</a>
+                    </li>
+                    <li>
+                        <a href="#">无锡老龄网</a>
+                    </li>
+                    <li>
+                        <a href="#">全国离退休人才网</a>
+                    </li>
+                    <li>
+                        <a href="#">山东老人网</a>
+                    </li>
+                    <li>
+                        <a href="#">新闻资讯</a>
+                    </li>
+                    <li>
+                        <a href="#">聚道网</a>
+                    </li>
+                    <li>
+                        <a href="#">常人网</a>
+                    </li>
+                    <li>
+                        <a href="#">无锡市便民服务中心</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="copyright">
+                <span>Copyright©2015-2025 去哪养老网 www.5199yl.com 版权所有</span>
+                <img src="images/believe.jpg" />
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script src="../index/js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script src="../index/js/common.js"></script>
+<!--<script src="js/list.js"></script>-->
+<script src="../index/js/laydate.js"></script>
+<script src="js/list_show.js"></script>
+<script src="js/choose_city2.js"></script>
+<script>
+!function(){
+    laydate.skin('dahong');//切换皮肤，请查看skins下面皮肤库
+}();
+</script>

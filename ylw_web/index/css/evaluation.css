@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.evaluation_box{padding-bottom:26px;border:1px solid #eee;overflow:hidden;margin-top:20px;}
+.evaluation_box ul li{font-size:12px;font-family:"微软雅黑";color:#808080;}
+ul.evaluation_ul{width:98%;margin:0 auto;}
+ul.evaluation_ul li{border-bottom:1px dashed #e9e9e9;overflow:hidden;}
+ul.evaluation_ul li .gender{float:left;width:160px;display:inline-block;margin-left:25px;}
+ul.evaluation_ul li .gender input{margin:0 4px 0 26px;display:inline-block;display:inline;vertical-align:middle;}
+ul.evaluation_ul li .gender span{vertical-align:middle;}
+ul.evaluation_ul li.male_box{height:50px;line-height:50px;}
+
+ul.evaluation_ul li .age{float:left;width:156px;height:50px;line-height:50px;margin-left:84px;display:inline-block;}
+input.ageInput{margin-left:14px;width:110px;height:26px;line-height:26px;border:1px solid #e7e7e7;}
+ul.evaluation_ul li .gender label,ul.evaluation_ul li .age label{font-size:14px;color:#4a4a4a;font-weight:bold;}
+input.radio_box{background:}
+ul.evaluation_ul li h4{line-height:40px;height:40px;font-size:14px;color:#4a4a4a;padding-left:24px;}
+ul.life_ability{clear:both;overflow:hidden;border-bottom:1px dashed #e9e9e9;}
+ul.life_ability li{width:280px;float:left;line-height:40px;height:40px;border-bottom:0;cursor:pointer;}
+ul.life_ability li em{width:16px;height:16px;line-height:16px;display:inline-block;background:url(../images/icon_select.png) no-repeat;background-position:center right;vertical-align:middle;cursor:pointer;}
+ul.life_ability li em:hover{width:16px;height:16px;line-height:16px;display:inline-block;background:url(../images/icon_select.png) no-repeat;background-position:center center;vertical-align:middle;cursor:pointer;}
+ul.life_ability li em.active{width:16px;height:16px;line-height:16px;display:inline-block;background:url(../images/icon_select.png) no-repeat;background-position:center left;vertical-align:middle;cursor:pointer;}
+ul.life_ability li span{vertical-align:middle;-padding-left:4px;margin-left:13px;}
+ul.life_ability li.ab_title{width:200px;margin-left:25px;}
+.evaluation_detail{margin-top:24px;overflow:hidden;}
+.evaluation_btn{width:280px;float:left;display:inline;margin-left:24px;}
+.grad_btn{width:200px;height:50px;line-height:50px;background:#cf0000;color:#fff;border:0;font-size:20px;font-family:"微软雅黑";cursor:pointer;}
+.grad_content{width:590px;float:left;}
+.grad_content p{font:normal 12px/24px "微软雅黑";color:#b9b9b9;}
+.grad_content p span{margin-right:25px;}
+.grad_content p.score{font-size:18px;font-family:Arial,"微软雅黑";color:#4a4a4a;margin:16px 0 36px 0;}
+.grad_content p.score span{}
+.grad_content p.score em{color:#00b344;font:normal 26px "Arial";margin-left:5px;}
+.grad_content p.score strong{font-size:22px;margin-left:5px;}
+.grad_content p.explain{color:#6a6a6a;margin-bottom:20px;}
+.grad_content p.explain strong{font-weight:bolder;margin-right:6px;}
+.tishi{display:none;width:160px;height:40px;font-size:16px;line-height:40px;text-align:center;background:#000;opacity:0.5;color:#fff;padding:5px 10px;position:fixed;top:30%;left:40%;cursor:pointer;}
